@@ -1,0 +1,43 @@
+/* for log in css */
+* {
+    margin: 0;
+    line-height: calc(1em + 0.5rem);
+}
+:root {
+    --clr-rose-600: #e11d48;
+    --clr-slate-300: #cbd5e1;
+}
+
+
+.s-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem; 
+    border: 1px solid black;
+}
+.header__cont {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.header__img {
+    border-radius: 5px;
+}
+.btn-cls {
+    background-color: var(--clr-rose-600);
+}
+.log-in_container { 
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80svh;
+}
+
+.log-in_container__input {
+    padding: 7px;
+    width: 30%;
+}
