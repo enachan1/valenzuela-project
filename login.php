@@ -15,29 +15,38 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="container">
+<header class="container-fluid">
         <nav>
-            <div class="header__cont d-flex justify-content-between">
-                <img src="https://via.placeholder.com/100" class="header__img" alt="logo ng valenzuela kunwari">
-                <h1 class="h1 mt-3">Coucil Secretariat Records Station</h1>
+            <div class="row">
+                <div class="col-sm col-md p-3 custom-img ">
+                    <img src="https://via.placeholder.com/100" class="img-fluid" alt="">
+                    
+                </div>
+                <div class="col-sm col-md-5 p-3 custom-flex">
+                    <h1 class="row__h1">Valenzuela 9th City Council</h1>
+                </div>
             </div>
         </nav>
     </header>
+    <!-- Main log in FOrm -->
+
     <main>
         <section class="container">
-        <form action="login_process.php" method="POST" autocomplete="off">
-            <div class="log-in_container">
-                <div class="d-flex flex-column grid gap-2 text-center justify-content-center w-25 mb-2">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" placeholder="Username" class="form-control log-in_container__input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <div class="row">
+                <form action="login_process.php" method="POST" autocomplete="off">
+                <div class="col-sm custom-inputs">
+                    <div class="input__section">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" name="username" id="username">
+                    </div>
+                    <div class="input__section">
+                        <label for="username">Password</label>
+                        <input type="text" class="form-control" name="password" id="username">
+                    </div>
+                    <button class="btn btn-danger">Submit</button>
+                    </form>
                 </div>
-                <div class="d-flex flex-column grid gap-2 text-center justify-content-center w-25 mb-2">
-                    <label for="pass">Password</label>
-                    <input type="password" name="password" placeholder="Password" class="log-in_container__input form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                </div>
-                    <button class="btn btn-danger">Log In</button>
             </div>
-        </form>
         </section>
     </main>
 </body>
