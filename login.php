@@ -37,11 +37,11 @@
                 <div class="col-sm custom-inputs">
                     <div class="input__section">
                         <label for="username">Username</label>
-                        <input type="text" class="form-control" name="username" id="username">
+                        <input type="text" class="form-control" name="username" id="username" required>
                     </div>
                     <div class="input__section">
-                        <label for="username">Password</label>
-                        <input type="text" class="form-control" name="password" id="username">
+                        <label for="pass">Password</label>
+                        <input type="password" class="form-control" name="password" id="pass" required>
                     </div>
                     <button class="btn btn-danger">Submit</button>
                     </form>
