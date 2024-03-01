@@ -18,6 +18,8 @@ $user = $_SESSION['username'];
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- data tables -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-2.0.0/af-2.7.0/b-3.0.0/b-colvis-3.0.0/b-html5-3.0.0/b-print-3.0.0/cr-2.0.0/date-1.5.2/fc-5.0.0/fh-4.0.0/kt-2.12.0/r-3.0.0/rg-1.5.0/rr-1.5.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/sl-2.0.0/sr-1.4.0/datatables.min.css" rel="stylesheet">
     <title>Superadmin</title>
 </head>
 <body>
@@ -50,14 +52,7 @@ $user = $_SESSION['username'];
             
         </div>
        <div class="container border p-3 mt-3">
-        <div class="row mt-5 justify-content-between">
-            <div class="col-sm col-md col-lg">
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addAgenda">Add E-Agenda</button>
-            </div>
-        </div>
-
-        <div class="row mt-5">
-
+        <div class="row">
             <div class="col-sm col-md col-lg">
                 <div class="table-responsive-sm table-responsive-md table-responsive-lg">
                 <table class="table table-bordered" id="list-agenda">
@@ -157,15 +152,70 @@ $user = $_SESSION['username'];
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <!-- DataTables Script -->
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/2.0.1/sorting/datetime-moment.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-2.0.0/af-2.7.0/b-3.0.0/b-colvis-3.0.0/b-html5-3.0.0/b-print-3.0.0/cr-2.0.0/date-1.5.2/fc-5.0.0/fh-4.0.0/kt-2.12.0/r-3.0.0/rg-1.5.0/rr-1.5.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/sl-2.0.0/sr-1.4.0/datatables.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("#list-agenda").DataTable();
+            $("#list-agenda").DataTable({
+                responsive: {
+                detail: false
+            },
+            keys: true,
+            processing: true,
+            layout: {
+                bottomStart: 'pageLength',
+                bottomEnd: 'paging',
+                dom: 'Bfrtip',
+                topStart: {
+                    buttons: [
+                    {
+                        text: 'Add Agenda',
+                        action: function (e, dt, node, config) {
+                            $('#addAgenda').modal('show');
+                        },
+                        className:'btn-info'
+                    },
+                    {
+                        extend:'spacer',
+                        style: 'bar'
+                    },
+                    {
+                        extend: 'excel',
+                        text: 'Import to Excel',
+                        key: {
+                            key: 'e',
+                            altKey: true
+                        },
+                        className: 'btn-success'
+                    },
+                    {
+                        extend: 'spacer',
+                        style: 'bar'
+                    },
+                    {
+                        extend: 'pdf',
+                        text: 'Import to PDF',
+                        className: 'btn-danger'
+                    },
+                    {
+                        extend: 'spacer',
+                        style: 'bar'
+                    },
+                    {
+                        extend: 'print',
+                        text: 'Print',
+                        className: 'btn-warning'             
+                    }]
+                },
+            },
         });
+    });
     </script>
-
 </body>
 </html>
 <?php 
