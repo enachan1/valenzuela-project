@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2024 at 03:21 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Mar 01, 2024 at 03:20 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,21 @@ SET time_zone = "+00:00";
 --
 -- Database: `valenzuela-test`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `e-agenda`
+--
+
+CREATE TABLE `e-agenda` (
+  `id` int(11) NOT NULL,
+  `agenda_no` bigint(20) NOT NULL,
+  `title` varchar(600) NOT NULL,
+  `author` varchar(255) NOT NULL,
+  `filename` varchar(255) NOT NULL,
+  `filepath` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -46,6 +61,12 @@ INSERT INTO `users` (`id`, `username`, `password`, `user_type`) VALUES
 --
 
 --
+-- Indexes for table `e-agenda`
+--
+ALTER TABLE `e-agenda`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -54,6 +75,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `e-agenda`
+--
+ALTER TABLE `e-agenda`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
