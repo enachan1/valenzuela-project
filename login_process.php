@@ -25,7 +25,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
                 $_SESSION['username'] = $fetch['username'];
                 $_SESSION['userlevel'] = $fetch['user_type'];
                 if(isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
-                    header("Location: /val-project/superadmin/superadmin.php");
+                    header("Location: /valenzuela-project/superadmin/superadmin.php");
                     exit();
                 }
                 else {

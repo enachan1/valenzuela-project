@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 1rem;
+    gap: 2.5rem;
     padding-left: 3rem;
     padding-right: 3rem;
     margin-top: 3rem;
@@ -13,8 +13,14 @@
     text-decoration: none;
 }
 
-
-
+.hide_content {
+    display: none;
+}
+.show_agenda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* xs */
 @media (min-width: 475px) {

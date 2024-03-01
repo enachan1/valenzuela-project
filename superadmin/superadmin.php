@@ -5,8 +5,8 @@ if(isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
 $user = $_SESSION['username'];
 
     if(!isset($user)) {
-        header("Location: login.php");
-        exit();
+        header("Location: /valenzuela-project/login.php");
+        exit(); 
     }
 ?>
 <!DOCTYPE html>
@@ -20,10 +20,10 @@ $user = $_SESSION['username'];
     <title>Superadmin</title>
 </head>
 <body>
-<header class="container-fluid  ">
+<header class="container-fluid">
         <nav>
             <div class="row">
-                <div class="col-sm col-md p-3 custom-img ">
+                <div class="col-sm col-md p-3 custom-img">
                     <img src="https://via.placeholder.com/100" class="img-fluid" alt="">
                 </div>
                 <div class="col-sm col-md-5 p-3 custom-flex">
@@ -37,13 +37,13 @@ $user = $_SESSION['username'];
     </header>
 
     <main>
-        <section class="container-fluid">
+        <section class="container border">
             <div class="row mt-5 justify-content-center custom-flex">
                 <div class="col-sm col-md col-lg">
                     <div class="section__cont">
-                        <a href="#" class="section__a">
+                        <a href="./pages/e-agenda.php" class="section__a">
                         <img src="https://via.placeholder.com/200" alt="hi" class="img-fluid">
-                        <h1>Sample</h1>
+                        <h1>E-Agenda</h1>
                         </a>
                     </div>
                 </div>
@@ -90,9 +90,12 @@ $user = $_SESSION['username'];
                     </div>
                 </div>
             </div>
+            </div>
         </section>
     </main>
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
