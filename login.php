@@ -19,7 +19,7 @@
         <nav>
             <div class="row">
                 <div class="col-sm col-md p-3 custom-img ">
-                    <img src="https://via.placeholder.com/100" class="img-fluid" alt="">
+                    <img src="assets/Valenzuela_Seal.png" class="custom__image img-fluid" alt="">
                     
                 </div>
                 <div class="col-sm col-md-5 p-3 custom-flex">

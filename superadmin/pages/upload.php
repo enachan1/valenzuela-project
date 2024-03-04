@@ -5,6 +5,7 @@ if(isset($_POST)) {
     $no = mysqli_real_escape_string($sqlcon, $_POST['no']);
     $title = mysqli_real_escape_string($sqlcon, $_POST['title']);
     $author = mysqli_real_escape_string($sqlcon, $_POST['author']); 
+    $date = mysqli_real_escape_string($sqlcon, $_POST['date']);
 
     //for file uploading
     $targetPath = "../../uploads/e-agenda/";
@@ -18,8 +19,8 @@ if(isset($_POST)) {
 
     if(in_array($fileExt, $fileTypes)) {
             if(move_uploaded_file($_FILES['pdf']['tmp_name'], $filePath)) {
-                $insert_query = "INSERT INTO `e-agenda`(`agenda_no`, `title`, `author`, `filename`, `filepath`)
-                    VALUES ($no, '$title', '$author', '$fileName','$filePath')";
+                $insert_query = "INSERT INTO `e-agenda`(`agenda_no`, `title`, `author`, `date`, `filename`, `filepath`)
+                    VALUES ($no, '$title', '$author', '$date', '$fileName','$filePath')";
                 $sqliquery = $sqlcon->query($insert_query);
 
                 if($sqliquery) {

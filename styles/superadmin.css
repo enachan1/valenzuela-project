@@ -12,9 +12,21 @@
 .section__a {
     text-decoration: none;
 }
-
-.hide_content {
+.section__h1 {
+    font-size: var(--size-2xl);
+}
+.ctm-sz {
+    height: 80vh;
+}
+.res_custom {
+    height: 80vh;
+}
+.isnav__hide {
     display: none;
+}
+.hide__navBtn {
+    display: inline-flex;
+    align-items: start;
 }
 .show_agenda {
     display: flex;
@@ -31,12 +43,19 @@
 }
   
 /* sm */
-/* @media (min-width: 640px) {} */
+@media (min-width: 640px) {
+    .custom-flex {
+        flex-direction: row ;
+    }
+}
   
 /* md */
 @media (min-width: 768px) {
-    .custom-flex {
-        flex-direction: row ;
+    .hide__navBtn {
+        display: none;
+    }
+    .isnav__hide {
+        display: block;
     }
 }
   

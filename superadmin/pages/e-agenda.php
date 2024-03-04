@@ -20,7 +20,7 @@ $user = $_SESSION['username'];
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-2.0.0/af-2.7.0/b-3.0.0/b-colvis-3.0.0/b-html5-3.0.0/b-print-3.0.0/cr-2.0.0/date-1.5.2/fc-5.0.0/fh-4.0.0/kt-2.12.0/r-3.0.0/rg-1.5.0/rr-1.5.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/sl-2.0.0/sr-1.4.0/datatables.min.css" rel="stylesheet">
-    <title>Superadmin</title>
+    <title>E-agenda | Superadmin</title>
 </head>
 <body>
 <header class="container-fluid border">
@@ -54,13 +54,18 @@ $user = $_SESSION['username'];
        <div class="container border p-3 mt-3">
         <div class="row">
             <div class="col-sm col-md col-lg">
+                <div class="d-flex justify-content-end">
+                    <input type="date" class="form-control w-50" id="min-date">
+                    <input type="date" class="form-control w-50" id="max-date">
+                </div>
                 <div class="table-responsive-sm table-responsive-md table-responsive-lg">
                 <table class="table table-bordered" id="list-agenda">
                     <thead>
                         <th>No</th>
                         <th>Title</th>
                         <th>Author</th>
-                        <th>Action</th>
+                        <th>Date</th>
+                        <th class="last-child">Action</th>
                     </thead>
                     
                     <tbody>
@@ -74,6 +79,7 @@ $user = $_SESSION['username'];
                                 <td><?= $rows['agenda_no']; ?></td>
                                 <td><?= $rows['title']; ?></td>
                                 <td><?= $rows['author']; ?></td>
+                                <td><?= $rows['date']; ?></td>
                                 <td>
                                     <a href="<?= $rows['filepath'] ?>" target="_blank" class="btn btn-primary">Download</a>
                                     <a data-bs-toggle="modal" data-bs-target="#confirmation" class="btn btn-danger">Delete</a>
@@ -134,6 +140,10 @@ $user = $_SESSION['username'];
                 <input type="text" class="form-control" name="author" id="auth">
             </div>
             <div class="mb-2">
+                <label for="message-text" class="col-form-label">Date</label>
+                <input type="date" class="form-control" name="date" id="auth">
+            </div>
+            <div class="mb-2">
                 <label for="message-text" class="col-form-label">PDF Upload</label>
                 <input type="file" class="form-control" name="pdf" id="auth">
             </div>
@@ -155,66 +165,11 @@ $user = $_SESSION['username'];
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
-    <script src="https://cdn.datatables.net/plug-ins/2.0.1/sorting/datetime-moment.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-2.0.0/af-2.7.0/b-3.0.0/b-colvis-3.0.0/b-html5-3.0.0/b-print-3.0.0/cr-2.0.0/date-1.5.2/fc-5.0.0/fh-4.0.0/kt-2.12.0/r-3.0.0/rg-1.5.0/rr-1.5.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/sl-2.0.0/sr-1.4.0/datatables.min.js"></script>
+    <script src="../../scripts/datatables.js"></script>
     <script>
-        $(document).ready(function () {
-            $("#list-agenda").DataTable({
-                responsive: {
-                detail: false
-            },
-            keys: true,
-            processing: true,
-            layout: {
-                bottomStart: 'pageLength',
-                bottomEnd: 'paging',
-                dom: 'Bfrtip',
-                topStart: {
-                    buttons: [
-                    {
-                        text: 'Add Agenda',
-                        action: function (e, dt, node, config) {
-                            $('#addAgenda').modal('show');
-                        },
-                        className:'btn-info'
-                    },
-                    {
-                        extend:'spacer',
-                        style: 'bar'
-                    },
-                    {
-                        extend: 'excel',
-                        text: 'Import to Excel',
-                        key: {
-                            key: 'e',
-                            altKey: true
-                        },
-                        className: 'btn-success'
-                    },
-                    {
-                        extend: 'spacer',
-                        style: 'bar'
-                    },
-                    {
-                        extend: 'pdf',
-                        text: 'Import to PDF',
-                        className: 'btn-danger'
-                    },
-                    {
-                        extend: 'spacer',
-                        style: 'bar'
-                    },
-                    {
-                        extend: 'print',
-                        text: 'Print',
-                        className: 'btn-warning'             
-                    }]
-                },
-            },
-        });
-    });
+        
     </script>
 </body>
 </html>
