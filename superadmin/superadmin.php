@@ -54,112 +54,128 @@ $user = $_SESSION['username'];
                             </a>
                         </span>
                     </div>
-                    <!-- Sidebar Navigation -->
-                    <ul class="sidebar-nav">
-                        <li class="sidebar-item">
-                            <div class="actives">
-                                <a class="sidebar-link active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">
-                                <i class="fas fa-home pe-2"></i>
-                                Home
+                        <!-- Sidebar Navigation -->
+                        <ul class="sidebar-nav">
+                            <li class="sidebar-item">
+                                <a class="active list-group-item list-group-item-action bs-light" href="#list-home" role="tab" aria-controls="list-home" data-bs-toggle="tab">
+                                    <i class="fas fa-home pe-2"></i> Home
                                 </a>
-                            </div>
-                        </li>
-                        <li class="sidebar-item">
-                            <div class="actives">
-                                <a href="#" class="sidebar-link collapser collapsed" data-bs-toggle="collapse" data-bs-target="#pages"
-                                    aria-expanded="false" aria-controls="pages">
-                                    <i class="fas fa-clipboard-user pe-2"></i>
-                                    Records
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#recordsSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle">
+                                    <i class="fas fa-clipboard-user pe-2"></i> Records
                                 </a>
-                            </div>
-                            <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                                <li class="test">
-                                    <div class="drop">
-                                        <a href="#" class="sidebar-link">Blank</a>
-                                        <a href="#" class="sidebar-link">Blank</a>
-                                        <a href="#" class="sidebar-link">Blank</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-item">
-                            <div class="actives">
-                                <a href="#" class="sidebar-link collapser collapsed" data-bs-toggle="collapse" data-bs-target="#auth"
-                                    aria-expanded="false" aria-controls="auth">
-                                    <i class="fas fa-user-alt pe-2"></i>
-                                    Admin
+                                <div class="collapse" id="recordsSubmenu">
+                                    <a href="#" class="list-group-item list-group-item-action bs-light">Subitem 1</a>
+                                    <a href="#" class="list-group-item list-group-item-action bs-light">Subitem 2</a>
+                                </div>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#adminSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle">
+                                    <i class="fas fa-user-alt pe-2"></i> Admin
                                 </a>
-                            </div>
-                            <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                                <li class="test">
-                                    <div class="drop">
-                                        <a href="#" class="sidebar-link">Blank</a>
-                                        <a href="#" class="sidebar-link">Blank</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-item">
-                            <div class="actives">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#multi"
-                                    aria-expanded="false" aria-controls="multi">
-                                    <i class="fas fa-journal-whills pe-2"></i>
-                                    Minutes and Journals
+                                <div class="collapse" id="adminSubmenu">
+                                    <a href="#" class="list-group-item list-group-item-action bs-light">Subitem 1</a>
+                                    <a href="#" class="list-group-item list-group-item-action bs-light">Subitem 2</a>
+                                </div>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#journalSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle" data-bs-toggle="collapse">
+                                    <i class="fas fa-journal-whills pe-2"></i> Minutes and Journals
                                 </a>
-                            </div>
-                            <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                                <li class="sidebar-item">
-                                    <div class="duactive">
-                                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                            data-bs-target="#multi-two" aria-expanded="false" aria-controls="multi-two">
-                                            Two Links
-                                        </a>
+                                <div class="collapse" id="journalSubmenu">
+                                    <a href="#journalSubSubmenu1" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle" data-bs-toggle="collapse">Sub Journal 1</a>
+                                    <div class="collapse" id="journalSubSubmenu1">
+                                        <a href="#" class="list-group-item list-group-item-action bs-light">Subitem 1</a>
+                                        <a href="#" class="list-group-item list-group-item-action bs-light">Subitem 2</a>
                                     </div>
-                                    <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">
-                                        <li class="test">
-                                            <div class="drop">
-                                                <a href="#" class="sidebar-link">Link 1</a>
-                                                <a href="#" class="sidebar-link">Link 2</a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="duactive">
-                                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                            data-bs-target="#multi-tree" aria-expanded="false" aria-controls="multi-tree">
-                                            Three Links
-                                        </a>
+                                </div>
+                                <div class="collapse" id="journalSubmenu2">
+                                    <a href="#journalSubSubmenu2" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle" data-bs-toggle="collapse">Sub Journal 2</a>
+                                    <div class="collapse" id="journalSubSubmenu2">
+                                        <a href="#" class="list-group-item list-group-item-action bs-light">Subitem 1</a>
+                                        <a href="#" class="list-group-item list-group-item-action bs-light">Subitem 2</a>
                                     </div>
-                                    <ul id="multi-tree" class="sidebar-dropdown list-unstyled collapse">
-                                        <li class="test">
-                                            <div class="drop">
-                                                <a href="#" class="sidebar-link">Link 1</a>
-                                                <a href="#" class="sidebar-link">Link 2</a>
-                                                <a href="#" class="sidebar-link">Link 3</a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-item">
-                            <div class="actives">
-                            <a class="sidebar-link" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">
-                                <i class="fas fa-cog pe-2"></i>
-                                Setting
-                            </a>
-                            </div>
-                        </li>
-                    </ul>
+                                </div>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="list-group-item list-group-item-action bs-light" href="#list-settings" role="tab" aria-controls="list-settings" data-bs-toggle="tab">
+                                    <i class="fas fa-cog pe-2"></i> Setting
+                                </a>
+                            </li>
+                        </ul>
                 </div>
             </div>
         </aside>
+
+        <!-- Offcanvas menu -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title" id="offcanvasSidebarLabel">User Name</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+                <div class="offcanvas-body">
+                    <!-- Offcanvas Navigation -->
+                    <ul class="navbar-nav justify-content flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#list-home" role="tab" aria-controls="list-home">
+                                <i class="fas fa-home pe-2"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#recordsSubmenu" data-bs-toggle="collapse" aria-expanded="false">
+                                <i class="fas fa-clipboard-user pe-2"></i> Records <i class="fas fa-caret-down"></i>
+                            </a>
+                            <div class="collapse" id="recordsSubmenu">
+                                <a class="nav-link" href="#">Subitem 1</a>
+                                <a class="nav-link" href="#">Subitem 2</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#adminSubmenu" data-bs-toggle="collapse" aria-expanded="false">
+                                <i class="fas fa-user-alt pe-2"></i> Admin <i class="fas fa-caret-down"></i>
+                            </a>
+                            <div class="collapse" id="adminSubmenu">
+                                <a class="nav-link" href="#">Subitem 1</a>
+                                <a class="nav-link" href="#">Subitem 2</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#journalSubmenu" data-bs-toggle="collapse" aria-expanded="false">
+                               <i class="fas fa-journal-whills pe-2"></i> Minutes and Journals <i class="fas fa-caret-down"></i>
+                            </a>
+                            <div class="collapse" id="journalSubmenu">
+                                <a class="nav-link" href="#journalSubSubmenu1" data-bs-toggle="collapse" aria-expanded="false">Sub Journal 1 <i class="fas fa-caret-down"></i></a>
+                                <div class="collapse" id="journalSubSubmenu1">
+                                    <a class="nav-link" href="#">Subitem 1</a>
+                                    <a class="nav-link" href="#">Subitem 2</a>
+                                </div>
+                            </div>
+                            <div class="collapse" id="journalSubmenu">
+                                <a class="nav-link" href="#journalSubSubmenu2" data-bs-toggle="collapse" aria-expanded="false">Sub Journal 2 <i class="fas fa-caret-down"></i></a>
+                                <div class="collapse" id="journalSubSubmenu2">
+                                    <a class="nav-link" href="#">Subitem 1</a>
+                                    <a class="nav-link" href="#">Subitem 2</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#list-settings" role="tab" aria-controls="list-settings" data-bs-toggle="tab">
+                                <i class="fas fa-cog pe-2"></i> Setting
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
 
         <!-- Main Component -->
         <div class="main">
             <nav class="navbar navbar-expand-md px-3 border-bottom border-top">
                 <!-- Button for sidebar toggle -->
-                <button class="btn" type="button" data-bs-theme="dark">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+                        <span class="navbar-toggler-icon"></span>
                 </button>
             </nav>
     
