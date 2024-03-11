@@ -111,7 +111,17 @@ $user = $_SESSION['username'];
         <!-- Offcanvas menu -->
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
             <div class="offcanvas-header border-bottom">
-                <h5 class="offcanvas-title" id="offcanvasSidebarLabel">User Name</h5>
+                <h5 class="offcanvas-title" id="offcanvasSidebarLabel">
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" style="color: var(--color_Dark);"><?= $user ?></a>
+
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="../logout.php" style="color: var(--color_Dark)">Log Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </h5>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                     aria-label="Close"></button>
             </div>
@@ -171,9 +181,9 @@ $user = $_SESSION['username'];
 
         <!-- Main Component -->
         <div class="main">
-            <nav class="navbar navbar-expand-md px-3 border-bottom border-top">
+            <nav class="navbar navbar-expand-md px-3 border-bottom border-top d-md-none">
                 <!-- Button for sidebar toggle -->
-                <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas"
+                <button class="btn" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
                         <span class="navbar-toggler-icon"></span>
                 </button>
