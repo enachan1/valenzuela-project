@@ -124,14 +124,29 @@ $user = $_SESSION['username'];
                 <li class="nav-item">
                     <a href="#" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Records</a>
+                <li class="nav-item custom-collapse">
+                    <a href="#record-sub-menu" data-bs-toggle="collapse" class="nav-link">Records</a>
+                    <div class="collapse p-2 ms-3 custom-collapse" id="record-sub-menu">
+                        <a class="nav-link" href="#">E-Agenda</a>
+                        <a class="nav-link" href="#">Another sub item</a>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Admin</a>
+                <li class="nav-item custom-collapse">
+                    <a href="#admin-sub-menu" data-bs-toggle="collapse" class="nav-link">Admin</a>
+                    <div class="collapse p-2 ms-3 custom-collapse" id="admin-sub-menu">
+                        <a class="nav-link" href="#">Outgoing</a>
+                        <a class="nav-link" href="#">Publication</a>
+                        <a class="nav-link" href="#">Certification</a>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Minutes and Journal</a>
+                <li class="nav-item custom-collapse">
+                    <a href="#min-sub-menu" data-bs-toggle="collapse" class="nav-link">Minutes and Journal</a>
+                    <div class="collapse p-2 ms-3 custom-collapse" id="min-sub-menu">
+                        <a class="nav-link" href="#">Transcript</a>
+                        <a class="nav-link" href="#">Minutes</a>
+                        <a class="nav-link" href="#">Minutes</a>
+                        <a class="nav-link" href="#">Attendance</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">Settings</a>
@@ -159,7 +174,62 @@ $user = $_SESSION['username'];
                     <main class="content px-3 py-2">
                         <div class="container-fluid">
                             <h1 class="mt-4">Home Page</h1>
-                            <p>This is the main content area.</p>
+                            <br>
+                            <table class="table w-50">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                    <th scope="col">Handle</th>
+                                    <th scope="col">Handle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    </tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    </tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    </tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    </tr>
+                                </tbody>
+                        </table>
                         </div>
                     </main>
                 </div>
@@ -190,6 +260,31 @@ $user = $_SESSION['username'];
                         </div>
                     </main>
                 </div>
+
+
+                <div class="tab-pane fade" id="list-agenda" role="tabpanel" aria-labelledby="list-agenda-list">
+            <main class="content px-3 py-2">
+            <section>
+                <div class="container-fluid">
+                        <h1 class="mt-4">Agenda</h1>
+                        
+                        <div class="table-responsive">
+                            <table class="table table-dark table-sm">
+                                <thead>
+                                    <th>No</th>
+                                    <th>Title</th>
+                                    <th>Author</th>
+                                    <th>Date</th>
+                                    <th class="last-child">Action</th>
+                                </thead>
+                            </table>
+                        </div>
+                </div>
+                </section>
+            </main>
+        </div>
+
+
             </div>
         </div>
 
