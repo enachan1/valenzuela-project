@@ -21,6 +21,7 @@ body {
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 /* Layout Top */
@@ -91,6 +92,7 @@ li {
     min-height: 86vh;
     width: 100%;
     overflow: hidden;
+    position: relative;
     flex-grow: 1;
     transition: all 0.35s ease-in-out;
 }

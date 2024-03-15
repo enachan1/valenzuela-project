@@ -19,6 +19,7 @@ $user = $_SESSION['username'];
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="../styles/superadmin.css">
+    <link rel="stylesheet" href="../styles/sidebar.css">
     <title>Home | Valenzuela</title>
 </head>
 
@@ -108,83 +109,47 @@ $user = $_SESSION['username'];
             </div>
         </aside>
 
-        <!-- Offcanvas menu -->
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
-            <div class="offcanvas-header border-bottom">
-                <h5 class="offcanvas-title" id="offcanvasSidebarLabel">
-                    <div class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" style="color: var(--color_Dark);"><?= $user ?></a>
+       <!-- Sidebar collapse -->
+       <div class="sidebar-collapse collapser d-md-none">
+        <div class="main-ul-cont">
+        <div class="sidebar-exit">
+            <button class="btn exit-toggler">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="24" width="24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
 
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item">
-                                <a href="../logout.php" style="color: var(--color_Dark)">Log Out</a>
-                            </li>
-                        </ul>
-                    </div>
-                </h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
-            </div>
-                <div class="offcanvas-body">
-                    <!-- Offcanvas Navigation -->
-                    <ul class="navbar-nav justify-content flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#list-home" role="tab" aria-controls="list-home">
-                                <i class="fas fa-home pe-2"></i> Home
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#recordsSubmenu" data-bs-toggle="collapse" aria-expanded="false">
-                                <i class="fas fa-clipboard-user pe-2"></i> Records <i class="fas fa-caret-down"></i>
-                            </a>
-                            <div class="collapse" id="recordsSubmenu">
-                                <a class="nav-link" href="#">Subitem 1</a>
-                                <a class="nav-link" href="#">Subitem 2</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#adminSubmenu" data-bs-toggle="collapse" aria-expanded="false">
-                                <i class="fas fa-user-alt pe-2"></i> Admin <i class="fas fa-caret-down"></i>
-                            </a>
-                            <div class="collapse" id="adminSubmenu">
-                                <a class="nav-link" href="#">Subitem 1</a>
-                                <a class="nav-link" href="#">Subitem 2</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#journalSubmenu" data-bs-toggle="collapse" aria-expanded="false">
-                               <i class="fas fa-journal-whills pe-2"></i> Minutes and Journals <i class="fas fa-caret-down"></i>
-                            </a>
-                            <div class="collapse" id="journalSubmenu">
-                                <a class="nav-link" href="#journalSubSubmenu1" data-bs-toggle="collapse" aria-expanded="false">Sub Journal 1 <i class="fas fa-caret-down"></i></a>
-                                <div class="collapse" id="journalSubSubmenu1">
-                                    <a class="nav-link" href="#">Subitem 1</a>
-                                    <a class="nav-link" href="#">Subitem 2</a>
-                                </div>
-                            </div>
-                            <div class="collapse" id="journalSubmenu">
-                                <a class="nav-link" href="#journalSubSubmenu2" data-bs-toggle="collapse" aria-expanded="false">Sub Journal 2 <i class="fas fa-caret-down"></i></a>
-                                <div class="collapse" id="journalSubSubmenu2">
-                                    <a class="nav-link" href="#">Subitem 1</a>
-                                    <a class="nav-link" href="#">Subitem 2</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#list-settings" role="tab" aria-controls="list-settings" data-bs-toggle="tab">
-                                <i class="fas fa-cog pe-2"></i> Setting
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+            </button>
         </div>
+            <ul class="sidebar-main-ul">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Records</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Minutes and Journal</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Settings</a>
+                </li>
+            </ul>
+        </div>
+        <div class="user-ul-cont">
+            <ul class="sidebar-ul-user">
+                <li>This is USer</li>
+            </ul>
+        </div>
+       </div>
 
         <!-- Main Component -->
         <div class="main">
-            <nav class="navbar navbar-expand-md px-3 border-bottom border-top d-md-none">
+            <nav class="navbar d-flex justify-content-end navbar-expand-md px-3 border-bottom border-top d-md-none">
                 <!-- Button for sidebar toggle -->
-                <button class="btn" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+                <button class="btn toggler" type="button">
                         <span class="navbar-toggler-icon"></span>
                 </button>
             </nav>
@@ -219,6 +184,7 @@ $user = $_SESSION['username'];
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="../scripts/side-nav.js"></script>
+<script src="../scripts/mobile-nav.js"></script>
 
 </body>
 
