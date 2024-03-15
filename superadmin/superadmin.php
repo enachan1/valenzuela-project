@@ -58,7 +58,7 @@ $user = $_SESSION['username'];
                         <!-- Sidebar Navigation -->
                         <ul class="sidebar-nav">
                             <li class="sidebar-item">
-                                <a class="active list-group-item list-group-item-action bs-light" href="#list-home" role="tab" aria-controls="list-home" data-bs-toggle="tab">
+                                <a class="active list-group-item list-group-item-action bs-light tabShow" id="home-tab" href="#list-home" role="tab" aria-controls="list-home" data-bs-toggle="tab">
                                     <i class="fas fa-home pe-2"></i> Home
                                 </a>
                             </li>
@@ -67,8 +67,8 @@ $user = $_SESSION['username'];
                                     <i class="fas fa-clipboard-user pe-2"></i> Records
                                 </a>
                                 <div class="collapse" id="recordsSubmenu">
-                                    <a href="#" class="list-group-item list-group-item-action bs-light">Subitem 1</a>
-                                    <a href="#" class="list-group-item list-group-item-action bs-light">Subitem 2</a>
+                                    <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 1</a>
+                                    <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 2</a>
                                 </div>
                             </li>
                             <li class="sidebar-item">
@@ -76,8 +76,8 @@ $user = $_SESSION['username'];
                                     <i class="fas fa-user-alt pe-2"></i> Admin
                                 </a>
                                 <div class="collapse" id="adminSubmenu">
-                                    <a href="#" class="list-group-item list-group-item-action bs-light">Subitem 1</a>
-                                    <a href="#" class="list-group-item list-group-item-action bs-light">Subitem 2</a>
+                                    <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 1</a>
+                                    <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem2">Subitem 2</a>
                                 </div>
                             </li>
                             <li class="sidebar-item">
@@ -87,20 +87,20 @@ $user = $_SESSION['username'];
                                 <div class="collapse" id="journalSubmenu">
                                     <a href="#journalSubSubmenu1" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle" data-bs-toggle="collapse">Sub Journal 1</a>
                                     <div class="collapse" id="journalSubSubmenu1">
-                                        <a href="#" class="list-group-item list-group-item-action bs-light">Subitem 1</a>
-                                        <a href="#" class="list-group-item list-group-item-action bs-light">Subitem 2</a>
+                                        <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 1</a>
+                                        <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 2</a>
                                     </div>
                                 </div>
                                 <div class="collapse" id="journalSubmenu2">
                                     <a href="#journalSubSubmenu2" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle" data-bs-toggle="collapse">Sub Journal 2</a>
                                     <div class="collapse" id="journalSubSubmenu2">
-                                        <a href="#" class="list-group-item list-group-item-action bs-light">Subitem 1</a>
-                                        <a href="#" class="list-group-item list-group-item-action bs-light">Subitem 2</a>
+                                        <a href="#1" class="list-group-item list-group-item-action bs-light tabShow">Subitem 1</a>
+                                        <a href="#2" class="list-group-item list-group-item-action bs-light tabShow">Subitem 2</a>
                                     </div>
                                 </div>
                             </li>
                             <li class="sidebar-item">
-                                <a class="list-group-item list-group-item-action bs-light" href="#list-settings" role="tab" aria-controls="list-settings" data-bs-toggle="tab">
+                                <a class="list-group-item list-group-item-action bs-light tabShow" id="settings-tab" href="#list-settings" role="tab" aria-controls="list-settings" data-bs-toggle="tab">
                                     <i class="fas fa-cog pe-2"></i> Setting
                                 </a>
                             </li>
@@ -155,7 +155,7 @@ $user = $_SESSION['username'];
             </nav>
     
             <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="home-tab">
                     <main class="content px-3 py-2">
                         <div class="container-fluid">
                             <h1 class="mt-4">Home Page</h1>
@@ -163,8 +163,26 @@ $user = $_SESSION['username'];
                         </div>
                     </main>
                 </div>
+
+                <div class="tab-pane fade show" id="subitem1" role="tabpanel" aria-labelledby="subitem1-tab">
+                    <main class="content px-3 py-2">
+                        <div class="container-fluid">
+                            <h1 class="mt-4">Subitem 1</h1>
+                            <p>This is the main content area.</p>
+                        </div>
+                    </main>
+                </div>
+
+                <div class="tab-pane fade show" id="subitem2" role="tabpanel" aria-labelledby="subitem2-tab">
+                    <main class="content px-3 py-2">
+                        <div class="container-fluid">
+                            <h1 class="mt-4">Subitem 2</h1>
+                            <p>This is the main content area.</p>
+                        </div>
+                    </main>
+                </div>
     
-                <div class="tab-pane fade show" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="settings-tab">
                     <main class="content px-3 py-2">
                         <div class="container-fluid">
                             <h1 class="mt-4">Settings</h1>

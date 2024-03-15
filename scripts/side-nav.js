@@ -64,7 +64,7 @@ document.querySelectorAll('.offcanvas-body .collapse').forEach(function(dropdown
 });
 
 document.addEventListener('click', function(event) {
-  if (!event.target.matches('.list-group-item-action') && !event.target.closest('.offcanvas-body')) {
+  if (!event.target.matches('.tabShow') && !event.target.closest('.offcanvas-body')) {
       closeAllOffcanvasDropdownsExcept(null);
   }
 });
@@ -72,16 +72,16 @@ document.addEventListener('click', function(event) {
 // Active
 document.addEventListener('DOMContentLoaded', function() {
   function updateActiveLink(activeLinkHref) {
-    document.querySelectorAll('.sidebar-nav .list-group-item-action, .offcanvas .nav-link').forEach(function(link) {
+    document.querySelectorAll('.sidebar-nav .tabShow, .offcanvas .nav-link').forEach(function(link) {
       link.classList.remove('active');
     });
 
-    document.querySelectorAll('.sidebar-nav .list-group-item-action[href="' + activeLinkHref + '"], .offcanvas .nav-link[href="' + activeLinkHref + '"]').forEach(function(link) {
+    document.querySelectorAll('.sidebar-nav .tabShow[href="' + activeLinkHref + '"], .offcanvas .nav-link[href="' + activeLinkHref + '"]').forEach(function(link) {
       link.classList.add('active');
     });
   }
 
-  document.querySelectorAll('.sidebar-nav .list-group-item-action').forEach(function(link) {
+  document.querySelectorAll('.sidebar-nav .tabShow').forEach(function(link) {
     link.addEventListener('click', function() {
       updateActiveLink(this.getAttribute('href'));
     });
@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var offcanvasLinks = document.querySelectorAll('.offcanvas .nav-link');
 
   offcanvasLinks.forEach(function(link) {
+
     link.addEventListener('click', function(event) {
       var targetPaneId = this.getAttribute('href');
       var targetPane = document.querySelector(targetPaneId);
