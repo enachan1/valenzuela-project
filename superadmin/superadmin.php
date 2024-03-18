@@ -76,8 +76,9 @@ $user = $_SESSION['username'];
                                     <i class="fas fa-user-alt pe-2"></i> Admin
                                 </a>
                                 <div class="collapse" id="adminSubmenu">
-                                    <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 1</a>
-                                    <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem2">Subitem 2</a>
+                                    <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Outgoing</a>
+                                    <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem2">Publication</a>
+                                    <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem2">Certification</a>
                                 </div>
                             </li>
                             <li class="sidebar-item">
