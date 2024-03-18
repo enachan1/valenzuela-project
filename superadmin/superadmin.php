@@ -123,40 +123,49 @@ $user = $_SESSION['username'];
         </div>
             <ul class="sidebar-main-ul">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link side-link">Home</a>
                 </li>
                 <li class="nav-item custom-collapse">
                     <a href="#record-sub-menu" data-bs-toggle="collapse" class="nav-link">Records</a>
                     <div class="collapse p-2 ms-3 custom-collapse" id="record-sub-menu">
-                        <a class="nav-link" href="#">E-Agenda</a>
-                        <a class="nav-link" href="#">Another sub item</a>
+                        <a class="nav-link side-link" href="#">E-Agenda</a>
+                        <a class="nav-link side-link" href="#">Another sub item</a>
                     </div>
                 </li>
                 <li class="nav-item custom-collapse">
                     <a href="#admin-sub-menu" data-bs-toggle="collapse" class="nav-link">Admin</a>
                     <div class="collapse p-2 ms-3 custom-collapse" id="admin-sub-menu">
-                        <a class="nav-link" href="#">Outgoing</a>
-                        <a class="nav-link" href="#">Publication</a>
-                        <a class="nav-link" href="#">Certification</a>
+                        <a class="nav-link side-link" href="#">Outgoing</a>
+                        <a class="nav-link side-link" href="#">Publication</a>
+                        <a class="nav-link side-link" href="#">Certification</a>
                     </div>
                 </li>
                 <li class="nav-item custom-collapse">
                     <a href="#min-sub-menu" data-bs-toggle="collapse" class="nav-link">Minutes and Journal</a>
                     <div class="collapse p-2 ms-3 custom-collapse" id="min-sub-menu">
-                        <a class="nav-link" href="#">Transcript</a>
-                        <a class="nav-link" href="#">Minutes</a>
-                        <a class="nav-link" href="#">Minutes</a>
-                        <a class="nav-link" href="#">Attendance</a>
+                        <a class="nav-link side-link" href="#">Transcript</a>
+                        <a class="nav-link side-link" href="#">Minutes</a>
+                        <a class="nav-link side-link" href="#">Minutes</a>
+                        <a class="nav-link side-link" href="#">Attendance</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Settings</a>
+                    <a href="#" class="nav-link side-link">Settings</a>
                 </li>
             </ul>
         </div>
         <div class="user-ul-cont">
             <ul class="sidebar-ul-user">
-                <li>This is USer</li>
+                <li><?= $user; ?></li>
+                <li>
+                <span>
+                            <a class="btn" href="../logout.php">
+                                <svg style="display: inline-block;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                                </svg>
+                            </a>
+                </span>
+                </li>
             </ul>
         </div>
        </div>
