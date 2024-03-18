@@ -32,7 +32,7 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
             <nav>
                 <div class="row custom-row">
                     <div class="col-md-2 p-3 custom-img">
-                        <img src="../assets/Valenzuela_Seal.png" class="custom__image img-fluid" alt="Sparkle Character">
+                        <img src="../assets/Valenzuela_Seal.png" class="img-fluid custom__image mx-auto" alt="Sparkle Character">
                     </div>
 
                     <div class="col-md-10 p-3 custom-flex">
@@ -44,8 +44,8 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
             </nav>
         </header>
         <main>
-            <div class="wrapper">
-                <!-- Sidebar -->
+            <div class="d-flex" id="wrapper">
+                <!-- Sidebar Main-->
                 <aside id="sidebar">
                     <div class="list-group" id="list-tab" role="tablist">
                         <div class="h-100">
@@ -71,7 +71,7 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                                         <i class="fas fa-clipboard-user pe-2"></i> Records
                                     </a>
                                     <div class="collapse" id="recordsSubmenu">
-                                        <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 1</a>
+                                        <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">E-Agenda</a>
                                         <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 2</a>
                                     </div>
                                 </li>
@@ -113,6 +113,7 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                         </div>
                     </div>
                 </aside>
+                <!-- Sidebar Main end-->
 
                 <!-- Sidebar collapse -->
                 <div class="sidebar-collapse collapser d-md-none">
@@ -164,28 +165,30 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                         </ul>
                     </div>
                 </div>
+            <!-- Sidebar collapse end -->
 
-                <!-- Main Component -->
-                <div class="main">
+            <!-- Main Component -->
+            <div class="main">
                     <nav class="navbar d-flex justify-content-end navbar-expand-md px-3 border-bottom border-top d-md-none">
                         <!-- Button for sidebar toggle -->
                         <button class="btn toggler" type="button">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </nav>
+                <div class="container-fluid px-4">
 
+                <!-- Tab Content 1-->
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="home-tab">
-                            <main class="content px-3 py-2">
+                            <div class="card mt-5 ms-3">
                                 <div class="row">
-                                    <div class="container border mx-5 pt-3 mt-3 me-5">
-                                        <div class="col-sm col-md col-lg">
-                                            <div class="d-flex justify-content-end w-50">
-                                                <input type="date" class="form-control w-50" id="min-date">
-                                                <input type="date" class="form-control w-50" id="max-date">
-                                            </div>
-                                            <div class="table-responsive-sm table-responsive-md table-responsive-lg">
-                                                <table class="table table-bordered" id="list-agenda">
+                                    <div class="col-5 col-sm-12">
+                                        <div class="d-flex justify-content-end w-50 mb-2 px-2 mt-2">
+                                            <input type="date" class="form-control w-50 me-2" id="min-date">
+                                            <input type="date" class="form-control w-50" id="max-date">
+                                        </div>
+                                            <div class="table-responsive px-2 mb-2">
+                                                <table class="table table-bordered bg-white rounded shadow-sm table-hover" id="list-agenda">
                                                     <thead>
                                                         <th>No</th>
                                                         <th>Title</th>
@@ -195,22 +198,22 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                                                     </thead>
 
                                                     <tbody>
-                                                        <?php
-                                                        $iteration_query = "SELECT * FROM `e-agenda`";
-                                                        $result = $sqlcon->query($iteration_query);
+                                                            <?php
+                                                            $iteration_query = "SELECT * FROM `e-agenda`";
+                                                            $result = $sqlcon->query($iteration_query);
 
-                                                        while ($rows = mysqli_fetch_assoc($result)) {
-                                                        ?>
-                                                            <tr>
-                                                                <td><?= $rows['agenda_no']; ?></td>
-                                                                <td><?= $rows['title']; ?></td>
-                                                                <td><?= $rows['author']; ?></td>
-                                                                <td><?= $rows['date']; ?></td>
-                                                                <td>
-                                                                    <a href="<?= $rows['filepath'] ?>" target="_blank" class="btn btn-primary">Download</a>
-                                                                    <a data-bs-toggle="modal" data-bs-target="#confirmation" class="btn btn-danger">Delete</a>
-                                                                </td>
-                                                            </tr>
+                                                            while ($rows = mysqli_fetch_assoc($result)) {
+                                                            ?>
+                                                                <tr>
+                                                                    <td><?= $rows['agenda_no']; ?></td>
+                                                                    <td><?= $rows['title']; ?></td>
+                                                                    <td><?= $rows['author']; ?></td>
+                                                                    <td><?= $rows['date']; ?></td>
+                                                                    <td>
+                                                                        <a href="<?= $rows['filepath'] ?>" target="_blank" class="btn btn-primary">Download</a>
+                                                                        <a data-bs-toggle="modal" data-bs-target="#confirmation" class="btn btn-danger">Delete</a>
+                                                                    </td>
+                                                                </tr>
 
                                                             <!-- Confirmation Modal -->
                                                             <div class="modal fade" id="confirmation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -232,17 +235,18 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                                                             </div>
                                                             <!-- End of Modal -->
 
-                                                        <?php  } ?>
-                                                    </tbody>
+                                                            <?php  } ?>
+                                                        </tbody>
 
-                                                </table>
+                                                    </table>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </main>
                         </div>
+                        <!-- Tab Content 1 End-->
 
+                        <!-- Tab Content 2-->                                            
                         <div class="tab-pane fade show" id="subitem1" role="tabpanel" aria-labelledby="subitem1-tab">
                             <main class="content px-3 py-2">
                                 <div class="container-fluid">
@@ -251,7 +255,9 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                                 </div>
                             </main>
                         </div>
+                        <!-- Tab Content 2 End-->
 
+                        <!-- Tab Content 3-->
                         <div class="tab-pane fade show" id="subitem2" role="tabpanel" aria-labelledby="subitem2-tab">
                             <main class="content px-3 py-2">
                                 <div class="container-fluid">
@@ -260,7 +266,9 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                                 </div>
                             </main>
                         </div>
+                        <!-- Tab Content 3 End-->                                            
 
+                        <!-- Tab Content 4-->
                         <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="settings-tab">
                             <main class="content px-3 py-2">
                                 <div class="container-fluid">
@@ -269,8 +277,9 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                                 </div>
                             </main>
                         </div>
+                        <!-- Tab Content 4 End-->                                            
 
-
+                        <!-- Tab Content 5-->
                         <div class="tab-pane fade" id="list-agenda" role="tabpanel" aria-labelledby="list-agenda-list">
                             <main class="content px-3 py-2">
                                 <section>
@@ -292,10 +301,12 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                                 </section>
                             </main>
                         </div>
+                        <!-- Tab Content 5 End-->
 
 
                     </div>
                 </div>
+            </div>
 
                 <!-- Modal for Adding Agenda -->
 
