@@ -1,5 +1,5 @@
 <?php 
-include __DIR__."../../../db_connect.php";
+include __DIR__."../../db_connect.php";
 if(isset($_POST)) {
 
     $no = mysqli_real_escape_string($sqlcon, $_POST['no']);
@@ -8,7 +8,7 @@ if(isset($_POST)) {
     $date = mysqli_real_escape_string($sqlcon, $_POST['date']);
 
     //for file uploading
-    $targetPath = "../../uploads/e-agenda/";
+    $targetPath = "../uploads/e-agenda/";
     $fileName = basename($_FILES['pdf']['name']);
     $fileExt = pathinfo($fileName, PATHINFO_EXTENSION);
     $fileSize = $_FILES['pdf']['size'];
@@ -24,16 +24,16 @@ if(isset($_POST)) {
                 $sqliquery = $sqlcon->query($insert_query);
 
                 if($sqliquery) {
-                    header("Location: e-agenda.php?success=Upload Success");
+                    header("Location: superadmin.php?success=Upload Success");
                     exit();
                 }
                 else {
-                    header("Location: e-agenda.php?fail=Upload Error");
+                    header("Location: superadmin.php?fail=Upload Error");
                     exit();
                 }
             }
             else {
-                header("Location: e-agenda.php?fail=An error occurred");
+                header("Location: superadmin.php?fail=An error occurred");
                 exit();
             }
     }
