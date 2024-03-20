@@ -1,6 +1,7 @@
 $(document).ready(function () {
     var table = $("#list-agenda").DataTable({
     keys: true,
+    responsive: true,
     processing: true,
     layout: {
         bottomStart: 'pageLength',
