@@ -86,6 +86,8 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                             ?>
                         </div>
                     </div>
+
+                    <!-- Table -->
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="home-tab">
                             <main class="content px-3 py-2">

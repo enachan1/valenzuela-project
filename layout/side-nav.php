@@ -12,7 +12,7 @@
         </div>
         <!-- Sidebar Navigation -->
         <ul class="sidebar-nav">
-            <li class="sidebar-item">
+            <li class="sidebar-item" data-bs-dismiss="offcanvas">
                 <a class="active list-group-item list-group-item-action bs-light tabShow" id="home-tab" href="#list-home" role="tab" aria-controls="list-home" data-bs-toggle="tab">
                     <i class="fas fa-home pe-2"></i> Home
                 </a>
@@ -21,7 +21,7 @@
                 <a href="#recordsSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle">
                     <i class="fas fa-clipboard-user pe-2"></i> Records
                 </a>
-                <div class="collapse" id="recordsSubmenu">
+                <div class="collapse" id="recordsSubmenu" data-bs-dismiss="offcanvas">
                     <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 1</a>
                     <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 2</a>
                 </div>
@@ -30,7 +30,7 @@
                 <a href="#adminSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle">
                     <i class="fas fa-user-alt pe-2"></i> Admin
                 </a>
-                <div class="collapse" id="adminSubmenu">
+                <div class="collapse" id="adminSubmenu" data-bs-dismiss="offcanvas">
                     <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Outgoing</a>
                     <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem2">Publication</a>
                     <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem2">Certification</a>
@@ -42,7 +42,7 @@
                 </a>
                 <div class="collapse" id="journalSubmenu">
                     <a href="#journalSubSubmenu1" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle" data-bs-toggle="collapse">Sub Journal 1</a>
-                    <div class="collapse" id="journalSubSubmenu1">
+                    <div class="collapse" id="journalSubSubmenu1" data-bs-dismiss="offcanvas">
                         <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 1</a>
                         <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 2</a>
                     </div>
