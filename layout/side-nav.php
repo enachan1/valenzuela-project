@@ -1,15 +1,5 @@
 <div class="list-group" id="list-tab" role="tablist">
-    <div class="h-100">
-        <div class="sidebar-logo d-flex justify-content-between">
-            <a class="d-flex justify-content-center align-items-center"><?= $user ?></a>
-            <span>
-                <a class="btn" href="../logout.php">
-                    <svg style="display: inline-block;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
-                    </svg>
-                </a>
-            </span>
-        </div>
+    <div class="d-flex flex-column justify-content-between overflow-hidden" style="min-height: 89.5svh;">
         <!-- Sidebar Navigation -->
         <ul class="sidebar-nav">
             <li class="sidebar-item" data-bs-dismiss="offcanvas">
@@ -61,5 +51,17 @@
                 </a>
             </li>
         </ul>
+
+        <div class="sidebar-logo d-flex justify-content-between">
+            <a class="d-flex justify-content-center align-items-center"><?= $user ?></a>
+            <span>
+                <a class="btn" href="../logout.php">
+                    <svg style="display: inline-block;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                    </svg>
+                </a>
+            </span>
+        </div>
+
     </div>
 </div>
