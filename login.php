@@ -18,12 +18,12 @@
 <header class="container-fluid">
         <nav>
             <div class="row">
-                <div class="col-sm col-md p-3 custom-img ">
-                    <img src="assets/Valenzuela_Seal.png" class="custom__image img-fluid" alt="">
+                <div class="col-md-2 p-3 custom-img ">
+                    <img src="assets/Valenzuela_Seal.png" class="custom__image img-fluid mx-auto" alt="">
                     
                 </div>
-                <div class="col-sm col-md-5 p-3 custom-flex">
-                    <h1 class="row__h1">Valenzuela 9th City Council</h1>
+                <div class="col-md-10 p-3 custom-flex">
+                    <span class="row__h1">Valenzuela 9th City Council</span>
                 </div>
             </div>
         </nav>
@@ -32,18 +32,22 @@
 
     <main>
         <section class="container">
-            <div class="row">
-                <form action="login_process.php" method="POST" autocomplete="off">
-                <div class="col-sm custom-inputs">
-                    <div class="input__section">
-                        <label for="username">Username</label>
-                        <input type="text" class="form-control" name="username" id="username" required>
-                    </div>
-                    <div class="input__section">
-                        <label for="pass">Password</label>
-                        <input type="password" class="form-control" name="password" id="pass" required>
-                    </div>
-                    <button class="btn btn-danger">Submit</button>
+            <div class="row justify-content-center"> 
+                <div class="col-md-6">
+                    <form action="login_process.php" method="POST" autocomplete="off">
+                        <div class="card shadow mt-5 py-3 px-3">
+                            <div class="card-body text-center">
+                                <div class="form-group px-3">
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control" name="username" id="username" required>
+                                </div>
+                                <div class="form-group px-3">
+                                    <label for="pass">Password</label>
+                                    <input type="password" class="form-control" name="password" id="pass" required>
+                                </div>
+                                <button class="btn btn-danger mx-3 mt-3">Log in</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
