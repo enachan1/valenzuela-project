@@ -114,7 +114,9 @@ li {
     border-right: none;
     border-left: none;
 }
-
+.filter-input {
+    max-width: 30ch;
+}
 /* Responsive */
 
 @media screen and (max-width: 769px) {

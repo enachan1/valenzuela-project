@@ -22,8 +22,11 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
         <link rel="stylesheet" href="../styles/sidebar.css">
         <link rel="stylesheet" href="../styles//style.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" />
+
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-2.0.0/af-2.7.0/b-3.0.0/b-colvis-3.0.0/b-html5-3.0.0/b-print-3.0.0/cr-2.0.0/date-1.5.2/fc-5.0.0/fh-4.0.0/kt-2.12.0/r-3.0.0/rg-1.5.0/rr-1.5.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/sl-2.0.0/sr-1.4.0/datatables.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.0/css/responsive.dataTables.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.0/css/responsive.bootstrap5.css">
         <title>Home | Valenzuela</title>
     </head>
 
@@ -86,20 +89,20 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                             ?>
                         </div>
                     </div>
-
-                    <!-- Table -->
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="home-tab">
                             <main class="content px-3 py-2">
                                 <div class="row">
-                                    <div class="container border">
+                                    <div class="container">
                                         <div class="col-sm col-md col-lg">
-                                            <div class="d-flex justify-content-end w-100">
-                                                <input type="date" class="form-control w-50" id="min-date">
-                                                <input type="date" class="form-control w-50" id="max-date">
+                                            <div class="d-flex justify-content-end grid mb-3 gap-2 align-items-center">
+                                                <label for="min-date">From:</label>
+                                                <input type="date" class="form-control filter-input" id="min-date">
+                                                <label for="max-date">To:</label>
+                                                <input type="date" class="form-control filter-input" id="max-date">
                                             </div>
-                                            <div class="table-responsive-sm table-responsive-md table-responsive-lg">
-                                                <table class="table table-bordered" id="list-agenda">
+                                            <div class="">
+                                                <table class="table table-bordered nowrap" style="width: 100%;" id="list-agenda">
                                                     <thead>
                                                         <th>No</th>
                                                         <th>Title</th>
@@ -270,6 +273,11 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-2.0.0/af-2.7.0/b-3.0.0/b-colvis-3.0.0/b-html5-3.0.0/b-print-3.0.0/cr-2.0.0/date-1.5.2/fc-5.0.0/fh-4.0.0/kt-2.12.0/r-3.0.0/rg-1.5.0/rr-1.5.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/sl-2.0.0/sr-1.4.0/datatables.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/3.0.0/js/dataTables.responsive.js"></script>
+        <script src="https://cdn.datatables.net/responsive/3.0.0/js/responsive.bootstrap5.js"></script>
+        <script src="https://cdn.datatables.net/2.0.2/js/dataTables.bootstrap5.js"></script>
+        <script src=""></script>
+        <script src=""></script>
         <script src="../scripts/datatables.js"></script>
 
     </body>
