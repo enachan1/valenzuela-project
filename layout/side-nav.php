@@ -22,8 +22,8 @@
                     <i class="fas fa-clipboard-user pe-2"></i> Records
                 </a>
                 <div class="collapse" id="recordsSubmenu" data-bs-dismiss="offcanvas">
-                    <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 1</a>
-                    <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 2</a>
+                    <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">E-Agenda</a>
+                    <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Incoming</a>
                 </div>
             </li>
             <li class="sidebar-item">
@@ -40,20 +40,11 @@
                 <a href="#journalSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle" data-bs-toggle="collapse">
                     <i class="fas fa-journal-whills pe-2"></i> Minutes and Journals
                 </a>
-                <div class="collapse" id="journalSubmenu">
-                    <a href="#journalSubSubmenu1" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle" data-bs-toggle="collapse">Sub Journal 1</a>
-                    <div class="collapse" id="journalSubSubmenu1" data-bs-dismiss="offcanvas">
-                        <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 1</a>
-                        <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 2</a>
-                    </div>
-                </div>
-                <div class="collapse" id="journalSubmenu2">
-                    <a href="#journalSubSubmenu2" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle" data-bs-toggle="collapse">Sub Journal 2</a>
-                    <div class="collapse" id="journalSubSubmenu2">
-                        <a href="#1" class="list-group-item list-group-item-action bs-light tabShow">Subitem 1</a>
-                        <a href="#2" class="list-group-item list-group-item-action bs-light tabShow">Subitem 2</a>
-                    </div>
-                </div>
+                <div class="collapse" id="journalSubmenu" data-bs-dismiss="offcanvas">
+                    <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Transcript</a>
+                    <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Minutes</a>
+                    <a href="#list-settings" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Committee Hearing</a>
+                    <a href="#list-settings" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Attendance</a>
             </li>
             <li class="sidebar-item">
                 <a class="list-group-item list-group-item-action bs-light tabShow" id="settings-tab" href="#list-settings" role="tab" aria-controls="list-settings" data-bs-toggle="tab">
