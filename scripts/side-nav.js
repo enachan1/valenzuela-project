@@ -14,13 +14,6 @@ document.querySelectorAll('.sidebar-item').forEach(function(item) {
   });
 });
 
-document.querySelectorAll('.sidebar-item .dropdown-toggle').forEach(function(toggle) {
-  toggle.addEventListener('click', function(event) {
-      var dropdown = document.querySelector(toggle.getAttribute('data-bs-target'));
-      closeAllDropdownsExcept(dropdown);
-  });
-});
-
 document.querySelectorAll('.sidebar-item .collapse').forEach(function(dropdown) {
   dropdown.addEventListener('click', function(event) {
       event.stopPropagation();

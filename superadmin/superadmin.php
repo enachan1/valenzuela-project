@@ -55,7 +55,7 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </nav>
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas offcanvas-end" tabindex="-11" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -93,7 +93,7 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                             </main>
                         </div>
 
-                        <div class="tab-pane fade show" id="subitem2" role="tabpanel" aria-labelledby="subitem2-tab">
+                        <div class="tab-pane fade show" id="incoming" role="tabpanel" aria-labelledby="subitem2-tab">
                             <main class="content px-3 py-2">
                                 <div class="container-fluid">
                                     <h1 class="mt-4">Subitem 2</h1>
@@ -187,6 +187,7 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="../scripts/side-nav.js"></script>
         <script src="../scripts/mobile-nav.js"></script>
+        <script src="../scripts/session-nav.js"></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

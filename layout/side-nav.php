@@ -3,17 +3,17 @@
         <!-- Sidebar Navigation -->
         <ul class="sidebar-nav">
             <li class="sidebar-item" data-bs-dismiss="offcanvas">
-                <a class="active list-group-item list-group-item-action bs-light tabShow" id="home-tab" href="#list-home" role="tab" aria-controls="list-home" data-bs-toggle="tab">
+                <a class="active list-group-item list-group-item-action bs-light session-active tabShow" id="home-tab" href="?tb=1" data-bs-target="#list-home" role="tab" aria-controls="list-home" data-bs-toggle="tab">
                     <i class="fas fa-home pe-2"></i> Home
                 </a>
             </li>
             <li class="sidebar-item">
-                <a href="#recordsSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle">
+                <a href="#recordsSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light drop dropdown-toggle">
                     <i class="fas fa-clipboard-user pe-2"></i> Records
                 </a>
                 <div class="collapse" id="recordsSubmenu" data-bs-dismiss="offcanvas">
-                    <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">E-Agenda</a>
-                    <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Incoming</a>
+                    <a href="?tb=2" data-bs-target="#agenda" class="list-group-item list-group-item-action bs-light session-active tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">E-Agenda</a>
+                    <a href="?tb=3" data-bs-target="#incoming" class="list-group-item list-group-item-action bs-light session-active tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Incoming</a>
                 </div>
             </li>
             <li class="sidebar-item">
