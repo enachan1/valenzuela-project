@@ -33,17 +33,9 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
     <body>
         <header class="container-fluid">
             <nav>
-                <div class="row custom-row">
-                    <div class="col-md-2 p-3 custom-img">
-                        <img src="../assets/Valenzuela_Seal.png" class="custom__image img-fluid mx-auto" alt="Sparkle Character">
-                    </div>
-
-                    <div class="col-md-10 p-3 custom-flex">
-                        <div class="d-flex mt-3 flex-column text-center">
-                            <h1 class="text-center row__h1">Valenzuela 9th City Council</h1>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                include("../layout/header.php");
+                ?>
             </nav>
         </header>
         <main>
@@ -55,21 +47,6 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                     ?>
                 </aside>
 
-                <!-- Sidebar collapse -->
-                <!-- <div class="sidebar-collapse collapser d-md-none">
-                    <div class="main-ul-cont">
-                        <div class="sidebar-exit">
-                            <button class="btn exit-toggler">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="24" width="24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                                </svg>
-
-                            </button>
-                        </div>
-                        
-                    </div>
-                </div> -->
-
                 <!-- Main Component -->
                 <div class="main">
                     <nav class="navbar d-flex justify-content-end navbar-expand-md px-3 border-bottom border-top d-md-none">
@@ -78,7 +55,7 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </nav>
-                    <div class="offcanvas offcanvas-end" tabindex="-11" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
