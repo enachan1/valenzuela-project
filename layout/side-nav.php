@@ -27,22 +27,12 @@
                 </div>
             </li>
             <li class="sidebar-item">
-                <a href="#journalSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle" data-bs-toggle="collapse">
+                <a href="#journalSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle">
                     <i class="fas fa-journal-whills pe-2"></i> Minutes and Journals
                 </a>
-                <div class="collapse" id="journalSubmenu">
-                    <a href="#journalSubSubmenu1" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle" data-bs-toggle="collapse">Sub Journal 1</a>
-                    <div class="collapse" id="journalSubSubmenu1" data-bs-dismiss="offcanvas">
-                        <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 1</a>
-                        <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 2</a>
-                    </div>
-                </div>
-                <div class="collapse" id="journalSubmenu">
-                    <a href="#journalSubSubmenu2" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle" data-bs-toggle="collapse">Sub Journal 2</a>
-                    <div class="collapse" id="journalSubSubmenu2">
-                        <a href="#1" class="list-group-item list-group-item-action bs-light tabShow">Subitem 1</a>
-                        <a href="#2" class="list-group-item list-group-item-action bs-light tabShow">Subitem 2</a>
-                    </div>
+                <div class="collapse" id="journalSubmenu" data-bs-dismiss="offcanvas">
+                    <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 1</a>
+                    <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 2</a>
                 </div>
             </li>
             <li class="sidebar-item">
