@@ -24,9 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     })
 
-    window.addEventListener("load", () => {
-        sessionStorage.clear();
-    })
 
 });
 

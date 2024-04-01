@@ -102,6 +102,33 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                             </main>
                         </div>
 
+                        <div class="tab-pane fade" id="outgoing" role="tabpanel" aria-labelledby="outgoing-tab">
+                            <main class="content px-3 py-2">
+                                <div class="container-fluid">
+                                    <h1 class="mt-4">Outgoing</h1>
+                                    <p>This is the main content area.</p>
+                                </div>
+                            </main>
+                        </div>
+
+                        <div class="tab-pane fade" id="publication" role="tabpanel" aria-labelledby="publication-tab">
+                            <main class="content px-3 py-2">
+                                <div class="container-fluid">
+                                    <h1 class="mt-4">Publication</h1>
+                                    <p>This is the main content area.</p>
+                                </div>
+                            </main>
+                        </div>
+
+                        <div class="tab-pane fade" id="certification" role="tabpanel" aria-labelledby="certification-tab">
+                            <main class="content px-3 py-2">
+                                <div class="container-fluid">
+                                    <h1 class="mt-4">Certification</h1>
+                                    <p>This is the main content area.</p>
+                                </div>
+                            </main>
+                        </div>
+
                         <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="settings-tab">
                             <main class="content px-3 py-2">
                                 <div class="container-fluid">
