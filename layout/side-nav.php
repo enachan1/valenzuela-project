@@ -12,8 +12,8 @@
                     <i class="fas fa-clipboard-user pe-2"></i> Records
                 </a>
                 <div class="collapse" id="recordsSubmenu" data-bs-dismiss="offcanvas">
-                    <a href="?tb=2" data-bs-target="#agenda" class="list-group-item list-group-item-action bs-light session-active tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">E-Agenda</a>
-                    <a href="?tb=3" data-bs-target="#incoming" class="list-group-item list-group-item-action bs-light session-active tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Incoming</a>
+                    <a href="?tb=2" data-bs-target="#agenda" class="list-group-item list-group-item-action bs-light session-active tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">E-Agenda</a>
+                    <a href="?tb=3" data-bs-target="#incoming" class="list-group-item list-group-item-action bs-light session-active tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Incoming</a>
                 </div>
             </li>
             <li class="sidebar-item">
@@ -21,9 +21,9 @@
                     <i class="fas fa-user-alt pe-2"></i> Admin
                 </a>
                 <div class="collapse" id="adminSubmenu" data-bs-dismiss="offcanvas">
-                    <a href="?tb=4" data-bs-target="#outgoing" class="list-group-item list-group-item-action bs-light session-active tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Outgoing</a>
-                    <a href="?tb=5" data-bs-target="#publication" class="list-group-item list-group-item-action bs-light session-active tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem2">Publication</a>
-                    <a href="?tb=6" data-bs-target="#certification" class="list-group-item list-group-item-action bs-light session-active tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem3">Certification</a>
+                    <a href="?tb=4" data-bs-target="#outgoing" class="list-group-item list-group-item-action bs-light session-active tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Outgoing</a>
+                    <a href="?tb=5" data-bs-target="#publication" class="list-group-item list-group-item-action bs-light session-active tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem2">Publication</a>
+                    <a href="?tb=6" data-bs-target="#certification" class="list-group-item list-group-item-action bs-light session-active tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem3">Certification</a>
                 </div>
             </li>
             <li class="sidebar-item">
@@ -31,8 +31,10 @@
                     <i class="fas fa-journal-whills pe-2"></i> Minutes and Journals
                 </a>
                 <div class="collapse" id="journalSubmenu" data-bs-dismiss="offcanvas">
-                    <a href="#subitem1" class="list-group-item list-group-item-action bs-light tabShow" id="subitem1-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 1</a>
-                    <a href="#subitem2" class="list-group-item list-group-item-action bs-light tabShow" id="subitem2-tab" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Subitem 2</a>
+                    <a href="?tb=7" data-bs-target="#transcript" class="list-group-item list-group-item-action bs-light tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Transcript</a>
+                    <a href="?tb=8" data-bs-target="#minutes" class="list-group-item list-group-item-action bs-light tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Minutes</a>
+                    <a href="?tb=9" data-bs-target="#committeeHearing" class="list-group-item list-group-item-action bs-light tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Committee Hearing</a>
+                    <a href="?tb=10" data-bs-target="#attendance" class="list-group-item list-group-item-action bs-light tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Attendance</a>
                 </div>
             </li>
             <li class="sidebar-item">

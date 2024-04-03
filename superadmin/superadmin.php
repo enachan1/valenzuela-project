@@ -175,6 +175,42 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                             </main>
                         </div>
 
+                        <div class="tab-pane fade" id="transcript" role="tabpanel" aria-labelledby="transcript-tab">
+                            <main class="content px-3 py-2">
+                                <div class="container-fluid">
+                                    <h1 class="mt-4">Transcript</h1>
+                                    <p>This is the main content area.</p>
+                                </div>
+                            </main>
+                        </div>
+
+                        <div class="tab-pane fade" id="minutes" role="tabpanel" aria-labelledby="minutes-tab">
+                            <main class="content px-3 py-2">
+                                <div class="container-fluid">
+                                    <h1 class="mt-4">Minutes</h1>
+                                    <p>This is the main content area.</p>
+                                </div>
+                            </main>
+                        </div>
+
+                        <div class="tab-pane fade" id="committeeHearing" role="tabpanel" aria-labelledby="committee-tab">
+                            <main class="content px-3 py-2">
+                                <div class="container-fluid">
+                                    <h1 class="mt-4">Committee Hearing</h1>
+                                    <p>This is the main content area.</p>
+                                </div>
+                            </main>
+                        </div>
+
+                        <div class="tab-pane fade" id="attendance" role="tabpanel" aria-labelledby="attendance-tab">
+                            <main class="content px-3 py-2">
+                                <div class="container-fluid">
+                                    <h1 class="mt-4">Attendance</h1>
+                                    <p>This is the main content area.</p>
+                                </div>
+                            </main>
+                        </div>
+
                         <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="settings-tab">
                             <main class="content px-3 py-2">
                                 <div class="container-fluid">
