@@ -6,7 +6,7 @@
         <input type="date" class="form-control filter-input" id="max-date">
     </div>
     <div class="">
-        <table class="table table-hover table-striped table-bordered nowrap" style="width: 100%;" id="list-agenda">
+        <table class="table table-hover table-striped table-bordered nowrap" style="width: 100%;" id="list-outgoing">
             <thead>
                 <th>No</th>
                 <th>Title</th>
@@ -35,12 +35,12 @@
 
                     <!-- Confirmation Modal -->
                     <div class="modal fade" id="confirmation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <?php include('modal-action.php') ?>
+                        <?php include('modal-action.php')?>
                     </div>
                     <!-- End of Modal -->
-
                 <?php  } ?>
             </tbody>
+
         </table>
     </div>
 </div>

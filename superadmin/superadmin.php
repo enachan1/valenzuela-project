@@ -80,133 +80,101 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                             </main>
                         </div>
 
-                        <div class="tab-pane fade show" id="agenda" role="tabpanel" aria-labelledby="subitem1-tab">
+                        <div class="tab-pane fade show" id="agenda" role="tabpanel" aria-labelledby="agenda-tab">
                             <main class="content px-3 py-2">
                                 <div class="row">
                                     <div class="container">
                                         <h1 class="p-2 mb-3 mt-3">E-Agenda</h1>
                                     </div>
-                                    <div class="col-sm col-md col-lg">
-                                        <div class="d-flex justify-content-end grid mb-3 gap-2 align-items-center">
-                                            <label for="min-date">From:</label>
-                                            <input type="date" class="form-control filter-input" id="min-date">
-                                            <label for="max-date">To:</label>
-                                            <input type="date" class="form-control filter-input" id="max-date">
-                                        </div>
-                                        <div class="">
-                                            <table class="table table-hover table-striped table-bordered nowrap" style="width: 100%;" id="list-agenda">
-                                                <thead>
-                                                    <th>No</th>
-                                                    <th>Title</th>
-                                                    <th>Author</th>
-                                                    <th>Date</th>
-                                                    <th class="last-child">Action</th>
-                                                </thead>
-
-                                                <tbody>
-                                                    <?php include('../layout/tables/e-agenda.php') ?>
-                                                </tbody>
-
-                                            </table>
-                                        </div>
-                                    </div>
+                                    <?php include('../layout/tables/e-agenda.php') ?>
                                 </div>
                             </main>
                         </div>
 
-                        <div class="tab-pane fade show" id="incoming" role="tabpanel" aria-labelledby="subitem2-tab">
+                        <div class="tab-pane fade show" id="incoming" role="tabpanel" aria-labelledby="incoming-tab">
                             <main class="content px-3 py-2">
                                 <div class="row">
                                     <div class="container-fluid">
                                         <h1 class="mt-4">Incoming</h1>
                                     </div>
-                                    <div class="col-sm col-md col-lg">
-                                        <div class="d-flex justify-content-end grid mb-3 gap-2 align-items-center">
-                                            <label for="min-date">From:</label>
-                                            <input type="date" class="form-control filter-input" id="min-date">
-                                            <label for="max-date">To:</label>
-                                            <input type="date" class="form-control filter-input" id="max-date">
-                                        </div>
-                                        <div class="">
-                                            <table class="table table-hover table-striped table-bordered nowrap" style="width: 100%;" id="list-incoming">
-                                                <thead>
-                                                    <th>No</th>
-                                                    <th>Title</th>
-                                                    <th>Author</th>
-                                                    <th>Date</th>
-                                                    <th class="last-child">Action</th>
-                                                </thead>
-
-                                                <tbody>
-                                                    <?php include('../layout/tables/e-agenda.php') ?>
-                                                </tbody>
-
-                                            </table>
-                                        </div>
-                                    </div>
+                                    <?php include('../layout/tables/incoming.php') ?>
                                 </div>
                             </main>
                         </div>
 
                         <div class="tab-pane fade" id="outgoing" role="tabpanel" aria-labelledby="outgoing-tab">
                             <main class="content px-3 py-2">
-                                <div class="container-fluid">
-                                    <h1 class="mt-4">Outgoing</h1>
-                                    <p>This is the main content area.</p>
+                                <div class="row">
+                                    <div class="container-fluid">
+                                        <h1 class="mt-4">Outgoing</h1>
+                                    </div>
+                                    <?php include('../layout/tables/outgoing.php') ?>
                                 </div>
                             </main>
                         </div>
 
                         <div class="tab-pane fade" id="publication" role="tabpanel" aria-labelledby="publication-tab">
                             <main class="content px-3 py-2">
-                                <div class="container-fluid">
-                                    <h1 class="mt-4">Publication</h1>
-                                    <p>This is the main content area.</p>
+                                <div class="row">
+                                    <div class="container-fluid">
+                                        <h1 class="mt-4">Publication</h1>
+                                        <?php include('../layout/tables/publications.php') ?>
+                                    </div>
                                 </div>
                             </main>
                         </div>
 
                         <div class="tab-pane fade" id="certification" role="tabpanel" aria-labelledby="certification-tab">
                             <main class="content px-3 py-2">
-                                <div class="container-fluid">
-                                    <h1 class="mt-4">Certification</h1>
-                                    <p>This is the main content area.</p>
+                                <div class="row">
+                                    <div class="container-fluid">
+                                        <h1 class="mt-4">Certification</h1>
+                                        <?php include('../layout/tables/certification.php') ?>
+                                    </div>
                                 </div>
                             </main>
                         </div>
 
                         <div class="tab-pane fade" id="transcript" role="tabpanel" aria-labelledby="transcript-tab">
                             <main class="content px-3 py-2">
-                                <div class="container-fluid">
-                                    <h1 class="mt-4">Transcript</h1>
-                                    <p>This is the main content area.</p>
+                                <div class="row">
+                                    <div class="container-fluid">
+                                        <h1 class="mt-4">Transcript</h1>
+                                        <?php include('../layout/tables/transcript.php') ?>
+                                    </div>
                                 </div>
                             </main>
                         </div>
 
                         <div class="tab-pane fade" id="minutes" role="tabpanel" aria-labelledby="minutes-tab">
                             <main class="content px-3 py-2">
-                                <div class="container-fluid">
-                                    <h1 class="mt-4">Minutes</h1>
-                                    <p>This is the main content area.</p>
+                                <div class="row">
+                                    <div class="container-fluid">
+                                        <h1 class="mt-4">Minutes</h1>
+                                        <?php include('../layout/tables/minutes.php') ?>
+                                    </div>
                                 </div>
                             </main>
                         </div>
 
                         <div class="tab-pane fade" id="committeeHearing" role="tabpanel" aria-labelledby="committee-tab">
                             <main class="content px-3 py-2">
-                                <div class="container-fluid">
-                                    <h1 class="mt-4">Committee Hearing</h1>
-                                    <p>This is the main content area.</p>
+                                <div class="row">
+                                    <div class="container-fluid">
+                                        <h1 class="mt-4">Committee Hearing</h1>
+                                        <?php include('../layout/tables/committee.php') ?>
+                                    </div>
                                 </div>
                             </main>
                         </div>
 
                         <div class="tab-pane fade" id="attendance" role="tabpanel" aria-labelledby="attendance-tab">
                             <main class="content px-3 py-2">
-                                <div class="container-fluid">
-                                    <h1 class="mt-4">Attendance</h1>
-                                    <p>This is the main content area.</p>
+                                <div class="row">
+                                    <div class="container-fluid">
+                                        <h1 class="mt-4">Attendance</h1>
+                                        <?php include('../layout/tables/attendance.php') ?>
+                                    </div>
                                 </div>
                             </main>
                         </div>

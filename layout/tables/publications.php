@@ -6,7 +6,7 @@
         <input type="date" class="form-control filter-input" id="max-date">
     </div>
     <div class="">
-        <table class="table table-hover table-striped table-bordered nowrap" style="width: 100%;" id="list-agenda">
+        <table class="table table-hover table-striped table-bordered nowrap" style="width: 100%;" id="list-publications">
             <thead>
                 <th>No</th>
                 <th>Title</th>
