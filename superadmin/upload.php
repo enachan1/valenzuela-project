@@ -1,10 +1,10 @@
-<?php 
-include __DIR__."../../db_connect.php";
-if(isset($_POST)) {
+<?php
+include __DIR__ . "../../db_connect.php";
+if (isset($_POST)) {
 
     $no = mysqli_real_escape_string($sqlcon, $_POST['no']);
     $title = mysqli_real_escape_string($sqlcon, $_POST['title']);
-    $author = mysqli_real_escape_string($sqlcon, $_POST['author']); 
+    $author = mysqli_real_escape_string($sqlcon, $_POST['author']);
     $date = mysqli_real_escape_string($sqlcon, $_POST['date']);
 
     //for file uploading
@@ -12,33 +12,36 @@ if(isset($_POST)) {
     $fileName = basename($_FILES['pdf']['name']);
     $fileExt = pathinfo($fileName, PATHINFO_EXTENSION);
     $fileSize = $_FILES['pdf']['size'];
-    // $conv_filesize = round($fileSize / 1024, 2);
-    // $limit_fileSize = round(209715200 / 1024, 2);
-    $filePath = $targetPath.$fileName;
+    $conv_filesize = round($fileSize / 1024, 2);
+    $limit_fileSize = round(124500400 / 1024, 2);
+    $filePath = $targetPath . $fileName;
     $fileTypes = array("pdf", "docx");
 
-    if(in_array($fileExt, $fileTypes)) {
-            if(move_uploaded_file($_FILES['pdf']['tmp_name'], $filePath)) {
+
+    if ($conv_filesize < $limit_fileSize) {
+        if (in_array($fileExt, $fileTypes)) {
+            if (move_uploaded_file($_FILES['pdf']['tmp_name'], $filePath)) {
                 $insert_query = "INSERT INTO `e-agenda`(`agenda_no`, `title`, `author`, `date`, `filename`, `filepath`)
                     VALUES ($no, '$title', '$author', '$date', '$fileName','$filePath')";
                 $sqliquery = $sqlcon->query($insert_query);
 
-                if($sqliquery) {
+                if ($sqliquery) {
                     header("Location: superadmin.php?success=Upload Success");
                     exit();
-                }
-                else {
+                } else {
                     header("Location: superadmin.php?fail=Upload Error");
                     exit();
                 }
-            }
-            else {
+            } else {
                 header("Location: superadmin.php?fail=An error occurred");
                 exit();
             }
+        } else {
+            header("Location: superadmin.php?fail=Unsupported File Format");
+        }
+    } else {
+        header("Location: superadmin.php?fail=File is too big");
     }
-    }
-    else {
-        echo "err";
-    }
-?>
+} else {
+    echo "err";
+}

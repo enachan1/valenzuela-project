@@ -9,7 +9,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <a href="../../superadmin/delete.php?target_id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
+            <a href="../superadmin/delete.php?target_id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
         </div>
     </div>
 </div>
