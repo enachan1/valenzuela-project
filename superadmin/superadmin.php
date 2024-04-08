@@ -22,7 +22,7 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
         <link rel="stylesheet" href="../styles/sidebar.css">
         <link rel="stylesheet" href="../styles//style.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" />
-
+        <link rel="stylesheet" href="https://cdn.datatables.net/plug-ins/2.0.3/features/searchHighlight/dataTables.searchHighlight.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-2.0.0/af-2.7.0/b-3.0.0/b-colvis-3.0.0/b-html5-3.0.0/b-print-3.0.0/cr-2.0.0/date-1.5.2/fc-5.0.0/fh-4.0.0/kt-2.12.0/r-3.0.0/rg-1.5.0/rr-1.5.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/sl-2.0.0/sr-1.4.0/datatables.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.0/css/responsive.dataTables.css">
@@ -41,7 +41,7 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
         <main>
             <div class="wrapper">
                 <!-- Sidebar -->
-                <aside id="sidebar">
+                <aside id="sidebar">    
                     <?php
                     include("../layout/side-nav.php");
                     ?>
@@ -83,8 +83,8 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                         <div class="tab-pane fade show" id="agenda" role="tabpanel" aria-labelledby="agenda-tab">
                             <main class="content px-3 py-2">
                                 <div class="row">
-                                    <div class="container">
-                                        <h1 class="p-2 mb-3 mt-3">E-Agenda</h1>
+                                    <div class="container-fluid">
+                                        <h1 class="mt-4">E-Agenda</h1>
                                     </div>
                                     <?php include('../layout/tables/e-agenda.php') ?>
                                 </div>
@@ -278,8 +278,8 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
         <script src="https://cdn.datatables.net/responsive/3.0.0/js/dataTables.responsive.js"></script>
         <script src="https://cdn.datatables.net/responsive/3.0.0/js/responsive.bootstrap5.js"></script>
         <script src="https://cdn.datatables.net/2.0.2/js/dataTables.bootstrap5.js"></script>
-        <script src=""></script>
-        <script src=""></script>
+        <script src="https://cdn.datatables.net/plug-ins/2.0.3/features/searchHighlight/dataTables.searchHighlight.min.js"></script>
+        <script src="https://bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
         <script src="../scripts/datatables.js"></script>
 
     </body>

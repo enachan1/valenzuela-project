@@ -71,13 +71,15 @@ li {
     display: flex;
     max-width: 100%;
 }
-
 #sidebar {
     max-width: 264px;
     min-width: 264px;
+    border: 1px solid black;
     transition: all 0.35s ease-in-out;
     box-shadow: 0 0 5px 0 rgba(12, 12, 12, 0.5);
     z-index: 0;
+    position: sticky;
+    top: 0px;
 }
 
 /* Sidebar collapse */
@@ -93,7 +95,9 @@ li {
     flex-grow: 1;
     transition: all 0.35s ease-in-out;
 }
-
+span.dtr-data {
+    white-space: normal;
+}
 .sidebar-logo {
     padding: 1.15rem 1.5rem;
 }
@@ -117,8 +121,15 @@ li {
 .filter-input {
     max-width: 30ch;
 }
+.thead-th {
+    display: none;
+}
+.num-row::before {
+    content: attr(data-num);
+    font-weight: bold;
+    padding-right: 55px;
+}
 /* Responsive */
-
 @media screen and (max-width: 769px) {
     .custom__image {
         width: 60px;
@@ -128,7 +139,6 @@ li {
         display: none;
     }
 }
-
 @media (max-width: 1080px){
     .content {
         width: auto;
