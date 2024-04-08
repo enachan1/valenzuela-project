@@ -13,7 +13,7 @@ if (isset($_POST)) {
     $fileExt = pathinfo($fileName, PATHINFO_EXTENSION);
     $fileSize = $_FILES['pdf']['size'];
     $conv_filesize = round($fileSize / 1024, 2);
-    $limit_fileSize = round(124500400 / 1024, 2);
+    $limit_fileSize = round(350345678 / 1024, 2);
     $filePath = $targetPath . $fileName;
     $fileTypes = array("pdf", "docx");
 
