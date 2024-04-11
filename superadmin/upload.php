@@ -18,30 +18,71 @@ if (isset($_POST)) {
     $fileTypes = array("pdf", "docx");
 
 
-    if ($conv_filesize < $limit_fileSize) {
-        if (in_array($fileExt, $fileTypes)) {
-            if (move_uploaded_file($_FILES['pdf']['tmp_name'], $filePath)) {
-                $insert_query = "INSERT INTO `e-agenda`(`agenda_no`, `title`, `author`, `date`, `filename`, `filepath`)
-                    VALUES ($no, '$title', '$author', '$date', '$fileName','$filePath')";
-                $sqliquery = $sqlcon->query($insert_query);
-
-                if ($sqliquery) {
-                    header("Location: superadmin.php?success=Upload Success");
-                    exit();
+    if (!file_exists($targetPath)) {
+        if (mkdir("../uploads") && mkdir("../uploads/e-agenda")) {
+            if ($conv_filesize < $limit_fileSize) {
+                if (in_array($fileExt, $fileTypes)) {
+                    if (move_uploaded_file($_FILES['pdf']['tmp_name'], $filePath)) {
+                        insertItem($no, $title, $author, $date, $fileName, $filePath);
+                    } else {
+                        header("Location: superadmin.php?fail=An error occurred");
+                        exit();
+                    }
                 } else {
-                    header("Location: superadmin.php?fail=Upload Error");
+                    header("Location: superadmin.php?fail=Unsupported File Format");
                     exit();
                 }
             } else {
-                header("Location: superadmin.php?fail=An error occurred");
+                header("Location: superadmin.php?fail=File is too big");
+                exit();
+            }
+        }
+    } else {
+        if ($conv_filesize < $limit_fileSize) {
+            if (in_array($fileExt, $fileTypes)) {
+                if (move_uploaded_file($_FILES['pdf']['tmp_name'], $filePath)) {
+                    insertItem($no, $title, $author, $date, $fileName, $filePath);
+                } else {
+                    header("Location: superadmin.php?fail=An error occurred");
+                    exit();
+                }
+            } else {
+                header("Location: superadmin.php?fail=Unsupported File Format");
                 exit();
             }
         } else {
-            header("Location: superadmin.php?fail=Unsupported File Format");
+            header("Location: superadmin.php?fail=File is too big");
+            exit();
         }
-    } else {
-        header("Location: superadmin.php?fail=File is too big");
     }
 } else {
     echo "err";
+}
+
+
+
+function insertItem($no, $title, $author, $date, $fileName, $filePath)
+{
+    include __DIR__ . "../../db_connect.php";
+
+    $chk_duplicate = "SELECT * FROM `e-agenda` WHERE `filename` = '$fileName' AND `filePath` = '$filePath'";
+    $chk_result = $sqlcon->query($chk_duplicate);
+
+    if (!mysqli_num_rows($chk_result) > 0) {
+        $insert_query = "INSERT INTO `e-agenda`(`agenda_no`, `title`, `author`, `date`, `filename`, `filepath`)
+        VALUES ($no, '$title', '$author', '$date', '$fileName','$filePath')";
+        $sqliquery = $sqlcon->query($insert_query);
+
+        if ($sqliquery) {
+            header("Location: superadmin.php?success=Upload Success");
+            exit();
+        } else {
+            header("Location: superadmin.php?fail=Upload Error");
+            exit();
+        }
+    }
+    else {
+        header("Location: superadmin.php?fail=File Exist");
+        exit();
+    }
 }
