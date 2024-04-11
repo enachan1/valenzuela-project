@@ -6,9 +6,9 @@
         <input type="date" class="form-control filter-input" id="max-date">
     </div>
     <div class="p-5">
-        <table class="table table-hover table-striped table-bordered display nowrap w-100"  id="list-agenda">
+        <table class="table table-hover table-striped table-bordered display nowrap" style="width: 100%;"  id="list-agenda">
             <thead>
-                <th class="thead-th">No</th>
+                <th></th>
                 <th>Title</th>
                 <th>Author</th>
                 <th>Date</th>
