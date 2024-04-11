@@ -1,6 +1,9 @@
 $(document).ready(function () {
     var agenda_tbl = $("#list-agenda").DataTable({
     keys: true,
+    paging: false,
+    scrollCollapse: true,
+    scrollY: '580px',
     responsive: {
         details: {
             display: $.fn.dataTable.Responsive.display.childRowImmediate,
@@ -13,8 +16,7 @@ $(document).ready(function () {
     columnDefs: [{
         searchable: false,
         targets: 4
-    }],
-    columns: [{width: '10%'}, {width: '30%'},null,null,null],
+    }, {targets: 1, responsivePriority: 1}],
     layout: {
         bottomStart: 'pageLength',
         bottomEnd: 'paging',
@@ -69,6 +71,8 @@ $(document).ready(function () {
         },
     },
 });
+
+agenda_tbl.columns.adjust().draw();
 
 // Add event listeners to the date inputs
 $('#min-date, #max-date').change(function() {

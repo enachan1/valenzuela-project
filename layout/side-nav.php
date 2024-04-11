@@ -1,5 +1,5 @@
 <div class="list-group" id="list-tab" role="tablist">
-    <div class="d-flex flex-column justify-content-between overflow-hidden" style="min-height: 89.5svh;">
+    <div class="d-flex flex-column justify-content-between overflow-hidden" style="min-height: 100svh;">
         <!-- Sidebar Navigation -->
         <ul class="sidebar-nav">
             <li class="sidebar-item" data-bs-dismiss="offcanvas">

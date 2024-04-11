@@ -74,7 +74,6 @@ li {
 #sidebar {
     max-width: 264px;
     min-width: 264px;
-    border: 1px solid black;
     transition: all 0.35s ease-in-out;
     box-shadow: 0 0 5px 0 rgba(12, 12, 12, 0.5);
     z-index: 0;
@@ -121,9 +120,9 @@ span.dtr-data {
 .filter-input {
     max-width: 30ch;
 }
-.thead-th {
+.no-th {
     display: none;
-}
+} 
 .num-row::before {
     content: attr(data-num);
     font-weight: bold;
