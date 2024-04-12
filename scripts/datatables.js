@@ -112,7 +112,6 @@ function(settings, data, dataIndex) {
 // //incoming datatable
 
 var incoming = $("#list-incoming").DataTable({
-    
     keys: true,
     responsive: true,
     processing: true,
@@ -179,24 +178,24 @@ $('#min-date, #max-date').change(function() {
 var minDate = $('#min-date').val();
 var maxDate = $('#max-date').val();
 
-// Filter the DataTable based on the date range
-incoming.draw();
-});
+// // Filter the DataTable based on the date range
+// incoming.draw();
+// });
 
-// Custom filtering function for date range
-$.fn.dataTable.ext.search.push(
-function(settings, data, dataIndex) {
-    var minDate = $('#min-date').val();
-    var maxDate = $('#max-date').val();
-    var date = data[3]; // Assuming date is in the third column
+// // Custom filtering function for date range
+// $.fn.dataTable.ext.search.push(
+// function(settings, data, dataIndex) {
+//     var minDate = $('#min-date').val();
+//     var maxDate = $('#max-date').val();
+//     var date = data[3]; // Assuming date is in the third column
 
-    if ((minDate === "" || maxDate === "") ||
-        (date >= minDate && date <= maxDate)) {
-        return true;
-    }
-    return false;
-}
-);
+//     if ((minDate === "" || maxDate === "") ||
+//         (date >= minDate && date <= maxDate)) {
+//         return true;
+//     }
+//     return false;
+// }
+// );
 
 // //outgoing table
 // var incoming = $("#list-outgoing").DataTable({

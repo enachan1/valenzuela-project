@@ -31,14 +31,14 @@
                     <i class="fas fa-journal-whills pe-2"></i> Minutes and Journals
                 </a>
                 <div class="collapse" id="journalSubmenu">
-                    <a href="?tb=7" data-bs-target="#transcript" class="list-group-item list-group-item-action bs-light tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Transcript</a>
-                    <a href="?tb=8" data-bs-target="#minutes" class="list-group-item list-group-item-action bs-light tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Minutes</a>
-                    <a href="?tb=9" data-bs-target="#committeeHearing" class="list-group-item list-group-item-action bs-light tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Committee Hearing</a>
-                    <a href="?tb=10" data-bs-target="#attendance" class="list-group-item list-group-item-action bs-light tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Attendance</a>
+                    <a href="?tb=7" data-bs-target="#transcript" class="list-group-item list-group-item-action session-active bs-light tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Transcript</a>
+                    <a href="?tb=8" data-bs-target="#minutes" class="list-group-item list-group-item-action session-active bs-light tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Minutes</a>
+                    <a href="?tb=9" data-bs-target="#committeeHearing" class="list-group-item list-group-item-action session-active bs-light tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Committee Hearing</a>
+                    <a href="?tb=10" data-bs-target="#attendance" class="list-group-item list-group-item-action session-active bs-light tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Attendance</a>
                 </div>
             </li>
             <li class="sidebar-item">
-                <a class="list-group-item list-group-item-action bs-light tabShow" id="settings-tab" href="#list-settings" role="tab" aria-controls="list-settings" data-bs-toggle="tab">
+                <a class="list-group-item list-group-item-action session-active bs-light tabShow" id="settings-tab" href="?tb=11" data-bs-target="#list-settings" role="tab" aria-controls="list-settings" data-bs-toggle="tab">
                     <i class="fas fa-cog pe-2"></i> Setting
                 </a>
             </li>
@@ -54,6 +54,5 @@
                 </a>
             </span>
         </div>
-
     </div>
 </div>
