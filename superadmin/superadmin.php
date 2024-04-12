@@ -16,12 +16,9 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
         <link rel="stylesheet" href="../styles/superadmin.css">
-        <link rel="stylesheet" href="../styles/sidebar.css">
         <link rel="stylesheet" href="../styles//style.css">
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" />
         <link rel="stylesheet" href="https://cdn.datatables.net/plug-ins/2.0.3/features/searchHighlight/dataTables.searchHighlight.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-2.0.0/af-2.7.0/b-3.0.0/b-colvis-3.0.0/b-html5-3.0.0/b-print-3.0.0/cr-2.0.0/date-1.5.2/fc-5.0.0/fh-4.0.0/kt-2.12.0/r-3.0.0/rg-1.5.0/rr-1.5.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/sl-2.0.0/sr-1.4.0/datatables.min.css" rel="stylesheet">
@@ -62,7 +59,7 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                         </div>
                         <div class="offcanvas-body">
                             <?php
-                            include("../layout/side-nav.php");
+                            include("../layout/side-nav-offcanvas.php");
                             ?>
                         </div>
                     </div>
@@ -219,40 +216,13 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
 
                 <div class="modal fade" id="addAgenda" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Add E-Agenda</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form method="POST" action="upload.php" enctype="multipart/form-data" autocomplete="off">
-                                    <div class="mb-2">
-                                        <label for="recipient-name" class="col-form-label">No.</label>
-                                        <input type="text" class="form-control" name="no" id="">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="recipient-name" class="col-form-label">Title</label>
-                                        <textarea class="form-control" id="message-text" name="title"></textarea>
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="message-text" class="col-form-label">Author</label>
-                                        <input type="text" class="form-control" name="author" id="auth">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="message-text" class="col-form-label">Date</label>
-                                        <input type="date" class="form-control" name="date" id="auth">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="message-text" class="col-form-label">PDF Upload</label>
-                                        <input type="file" class="form-control" name="pdf" id="auth">
-                                    </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn btn-primary">Add Agenda</button>
-                                </form>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
+                        <?php include('../layout/table-modal-crud/crud-agenda.php') ?>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="addIncoming" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <?php include('../layout/table-modal-crud/crud-incoming.php') ?>
                     </div>
                 </div>
                 <!-- End of Modal -->
@@ -262,10 +232,8 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="../scripts/side-nav.js"></script>
-        <script src="../scripts/mobile-nav.js"></script>
         <script src="../scripts/session-nav.js"></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -279,7 +247,6 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
         <script src="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-2.0.0/af-2.7.0/b-3.0.0/b-colvis-3.0.0/b-html5-3.0.0/b-print-3.0.0/cr-2.0.0/date-1.5.2/fc-5.0.0/fh-4.0.0/kt-2.12.0/r-3.0.0/rg-1.5.0/rr-1.5.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/sl-2.0.0/sr-1.4.0/datatables.min.js"></script>
         <script src="https://cdn.datatables.net/responsive/3.0.0/js/dataTables.responsive.js"></script>
         <script src="https://cdn.datatables.net/responsive/3.0.0/js/responsive.bootstrap5.js"></script>
-        <script src="https://cdn.datatables.net/2.0.2/js/dataTables.bootstrap5.js"></script>
         <script src="https://cdn.datatables.net/plug-ins/2.0.3/features/searchHighlight/dataTables.searchHighlight.min.js"></script>
         <script src="https://bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
         <script src="../scripts/datatables.js"></script>
