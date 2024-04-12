@@ -17,11 +17,13 @@
                             <div class="col d-flex align-items-center justify-content-center border border-danger mx-auto">
                                 <h1>Add Category</h1>
                             </div>
+                            <form action="../layout/table-modal-crud/add-category.php" method="post">
                             <div class="col-12 d-flex justify-content-center align-items-center grid gap-3 flex-column border p-3 mx-auto">
                                     <label for="category-name">Category Name</label>
                                     <input type="text" class="form-control w-25" name="category-name" id="category-name">
-                                    <button type="button" class="btn btn-primary" style="max-width: 50ch;">Add</button>
+                                    <button class="btn btn-primary" style="max-width: 50ch;">Add</button>
                             </div>
+                            </form>
                         </div>
                     </div>
                     <div class="tab-pane" id="profile" role="tabpanel">
@@ -29,11 +31,13 @@
                             <div class="col d-flex align-items-center justify-content-center border border-danger mx-auto">
                                 <h1>Add Author</h1>
                             </div>
+                            <form action="../layout/table-modal-crud/add-author.php" method="post">
                             <div class="col-12 d-flex justify-content-center align-items-center grid gap-3 flex-column border p-3 mx-auto">
                                     <label for="category-name">Author Name</label>
-                                    <input type="text" class="form-control w-25" name="category-name" id="category-name">
-                                    <button type="button" class="btn btn-primary" style="max-width: 50ch;">Add</button>
+                                    <input type="text" class="form-control w-25" name="author-name" id="author-name">
+                                    <button class="btn btn-primary" style="max-width: 50ch;">Add</button>
                             </div>
+                            </form>
                         </div>
                     </div>
                     <div class="tab-pane" id="messages" role="tabpanel">idi</div>

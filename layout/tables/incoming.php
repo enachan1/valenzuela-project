@@ -5,7 +5,7 @@
         <label for="max-date">To:</label>
         <input type="date" class="form-control filter-input" id="max-date">
     </div>
-    <div class="">
+    <div class="p-5">
         <table class="table table-hover table-striped table-bordered nowrap" style="width: 100%;" id="list-incoming">
             <thead>
                 <th>Title</th>

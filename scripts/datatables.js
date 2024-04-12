@@ -72,7 +72,7 @@ $(document).ready(function () {
     },
 });
 
-agenda_tbl.columns.adjust().draw();
+// agenda_tbl.columns.adjust().draw();
 
 // Add event listeners to the date inputs
 $('#min-date, #max-date').change(function() {
@@ -114,7 +114,14 @@ function(settings, data, dataIndex) {
 var incoming = $("#list-incoming").DataTable({
     
     keys: true,
-    responsive: true,
+    responsive: {
+        details: {
+            display: $.fn.dataTable.Responsive.display.childRowImmediate,
+            type: 'none',
+            target: -1,
+            renderer: $.fn.dataTable.Responsive.renderer.listHidden()
+        }
+    },
     processing: true,
     layout: {
         bottomStart: 'pageLength',

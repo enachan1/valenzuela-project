@@ -11,9 +11,14 @@
             </div>
             <div class="form-floating mb-2">
                 <select class="form-select" id="floatingSelect" aria-label="Category">
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <?php
+                        $cat_option = "SELECT * FROM `setting_category`";
+                        $result_cat = $sqlcon->query($cat_option);
+                        
+                        while($rows = mysqli_fetch_assoc($result_cat)) {
+                    ?>
+                    <option value="<?= $rows['category_name'] ?>"><?= $rows['category_name'] ?></option>
+                    <?php } ?>
                 </select>
                 <label for="floatingSelect">Category</label>
             </div>
