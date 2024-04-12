@@ -112,6 +112,7 @@ function(settings, data, dataIndex) {
 // //incoming datatable
 
 var incoming = $("#list-incoming").DataTable({
+    
     keys: true,
     responsive: true,
     processing: true,
@@ -169,14 +170,12 @@ var incoming = $("#list-incoming").DataTable({
             }]
         },
     },
-
-});
-
-// Add event listeners to the date inputs
-$('#min-date, #max-date').change(function() {
-// Get the min and max dates
-var minDate = $('#min-date').val();
-var maxDate = $('#max-date').val();
+})
+// // Add event listeners to the date inputs
+// $('#min-date, #max-date').change(function() {
+// // Get the min and max dates
+// var minDate = $('#min-date').val();
+// var maxDate = $('#max-date').val();
 
 // // Filter the DataTable based on the date range
 // incoming.draw();
