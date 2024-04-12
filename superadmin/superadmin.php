@@ -41,7 +41,7 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
         <main>
             <div class="wrapper">
                 <!-- Sidebar -->
-                <aside id="sidebar">    
+                <aside id="sidebar">
                     <?php
                     include("../layout/side-nav.php");
                     ?>
@@ -181,9 +181,11 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
 
                         <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="settings-tab">
                             <main class="content px-3 py-2">
-                                <div class="container-fluid">
-                                    <h1 class="mt-4">Settings</h1>
-                                    <p>This is the main content area.</p>
+                                <div class="row">
+                                    <div class="container-fluid">
+                                        <h1 class="mt-4">Settings</h1>
+                                        <?php include("../layout/settings.php"); ?>
+                                    </div>
                                 </div>
                             </main>
                         </div>
