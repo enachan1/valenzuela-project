@@ -2,7 +2,7 @@
     <div class="d-flex flex-column justify-content-between overflow-hidden" style="min-height: 100svh;">
         <!-- Sidebar Navigation -->
         <ul class="sidebar-nav">
-            <li class="sidebar-item">
+            <li class="sidebar-item" data-bs-dismiss="offcanvas">
                 <a class="active list-group-item list-group-item-action bs-light session-active tabShow" id="home-tab" href="?tb=1" data-bs-target="#list-home" role="tab" aria-controls="list-home" data-bs-toggle="tab">
                     <i class="fas fa-home pe-2"></i> Home
                 </a>
@@ -11,7 +11,7 @@
                 <a href="#recordsSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light drop dropdown-toggle">
                     <i class="fas fa-clipboard-user pe-2"></i> Records
                 </a>
-                <div class="collapse" id="recordsSubmenu">
+                <div class="collapse" id="recordsSubmenu" data-bs-dismiss="offcanvas">
                     <a href="?tb=2" data-bs-target="#agenda" class="list-group-item list-group-item-action bs-light session-active tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">E-Agenda</a>
                     <a href="?tb=3" data-bs-target="#incoming" class="list-group-item list-group-item-action bs-light session-active tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Incoming</a>
                 </div>
@@ -20,7 +20,7 @@
                 <a href="#adminSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle">
                     <i class="fas fa-user-alt pe-2"></i> Admin
                 </a>
-                <div class="collapse" id="adminSubmenu">
+                <div class="collapse" id="adminSubmenu" data-bs-dismiss="offcanvas">
                     <a href="?tb=4" data-bs-target="#outgoing" class="list-group-item list-group-item-action bs-light session-active tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Outgoing</a>
                     <a href="?tb=5" data-bs-target="#publication" class="list-group-item list-group-item-action bs-light session-active tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem2">Publication</a>
                     <a href="?tb=6" data-bs-target="#certification" class="list-group-item list-group-item-action bs-light session-active tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem3">Certification</a>
@@ -30,7 +30,7 @@
                 <a href="#journalSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bs-light dropdown-toggle">
                     <i class="fas fa-journal-whills pe-2"></i> Minutes and Journals
                 </a>
-                <div class="collapse" id="journalSubmenu">
+                <div class="collapse" id="journalSubmenu" data-bs-dismiss="offcanvas">
                     <a href="?tb=7" data-bs-target="#transcript" class="list-group-item list-group-item-action bs-light tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Transcript</a>
                     <a href="?tb=8" data-bs-target="#minutes" class="list-group-item list-group-item-action bs-light tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Minutes</a>
                     <a href="?tb=9" data-bs-target="#committeeHearing" class="list-group-item list-group-item-action bs-light tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Committee Hearing</a>

@@ -8,24 +8,22 @@
     <div class="">
         <table class="table table-hover table-striped table-bordered nowrap" style="width: 100%;" id="list-incoming">
             <thead>
-                <th>No</th>
                 <th>Title</th>
-                <th>Author</th>
+                <th>Category</th>
                 <th>Date</th>
                 <th class="last-child">Action</th>
             </thead>
 
             <tbody>
                 <?php
-                $iteration_query = "SELECT * FROM `e-agenda`";
+                $iteration_query = "SELECT * FROM `incoming`";
                 $result = $sqlcon->query($iteration_query);
 
                 while ($rows = mysqli_fetch_assoc($result)) {
                 ?>
                     <tr>
-                        <td><?= $rows['agenda_no']; ?></td>
                         <td><?= $rows['title']; ?></td>
-                        <td><?= $rows['author']; ?></td>
+                        <td><?= $rows['category']; ?></td>
                         <td><?= $rows['date']; ?></td>
                         <td>
                             <a href="<?= $rows['filepath'] ?>" target="_blank" class="btn btn-primary">
