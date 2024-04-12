@@ -112,6 +112,7 @@ function(settings, data, dataIndex) {
 // //incoming datatable
 
 var incoming = $("#list-incoming").DataTable({
+    
     keys: true,
     responsive: true,
     processing: true,
