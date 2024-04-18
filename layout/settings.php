@@ -24,6 +24,7 @@
                                     <button class="btn btn-primary" style="max-width: 50ch;">Add</button>
                             </div>
                             </form>
+                            <?php include('../layout/tables/category.php')?>
                         </div>
                     </div>
                     <div class="tab-pane" id="profile" role="tabpanel">
@@ -38,6 +39,7 @@
                                     <button class="btn btn-primary" style="max-width: 50ch;">Add</button>
                             </div>
                             </form>
+                            <?php include('../layout/tables/authors.php')?>
                         </div>
                     </div>
                     <div class="tab-pane" id="messages" role="tabpanel">idi</div>

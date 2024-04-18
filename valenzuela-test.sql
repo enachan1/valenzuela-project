@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 12, 2024 at 07:26 AM
+-- Generation Time: Apr 18, 2024 at 02:57 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -64,6 +64,42 @@ CREATE TABLE `incoming` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `setting_author`
+--
+
+CREATE TABLE `setting_author` (
+  `id` int(11) NOT NULL,
+  `author_name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `setting_author`
+--
+
+INSERT INTO `setting_author` (`id`, `author_name`) VALUES
+(2, 'Jek');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `setting_category`
+--
+
+CREATE TABLE `setting_category` (
+  `id` int(11) NOT NULL,
+  `category_name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `setting_category`
+--
+
+INSERT INTO `setting_category` (`id`, `category_name`) VALUES
+(4, 'Vice Mayors');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -99,6 +135,18 @@ ALTER TABLE `incoming`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `setting_author`
+--
+ALTER TABLE `setting_author`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `setting_category`
+--
+ALTER TABLE `setting_category`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -119,6 +167,18 @@ ALTER TABLE `e-agenda`
 --
 ALTER TABLE `incoming`
   MODIFY `id` bigint(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `setting_author`
+--
+ALTER TABLE `setting_author`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `setting_category`
+--
+ALTER TABLE `setting_category`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`

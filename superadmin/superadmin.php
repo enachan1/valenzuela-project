@@ -69,7 +69,7 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                                 <div class="row">
                                     <div class="container-fluid">
                                         <!-- Pane Description -->
-                                        <div class="p-2 mb-3 mt-3">
+                                        <div class="p-2 mb-3 mt-3 ">
                                             <h1 class="h1">Home</h1>
                                             <?php include('../layout/home.php')?>
                                         </div>
