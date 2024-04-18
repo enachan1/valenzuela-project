@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 18, 2024 at 02:57 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Apr 18, 2024 at 04:25 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,22 +29,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `e-agenda` (
   `id` int(11) NOT NULL,
-  `agenda_no` bigint(20) NOT NULL,
   `title` varchar(600) NOT NULL,
-  `author` varchar(255) NOT NULL,
   `date` date DEFAULT NULL,
   `filename` varchar(255) NOT NULL,
   `filepath` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `e-agenda`
---
-
-INSERT INTO `e-agenda` (`id`, `agenda_no`, `title`, `author`, `date`, `filename`, `filepath`) VALUES
-(16, 1000, 'Title', 'Author', '2024-04-12', 'Home  Valenzuela.pdf', '../uploads/e-agenda/Home  Valenzuela.pdf'),
-(17, 1001, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum erat ut nisl bibendum, a dapibus ex blandit. Nunc pulvinar nisl in urna porta, bibendum rutrum dolor accumsan. Nullam tincidunt nibh tempus, pellentesque felis id, mollis dolor. In feugiat sem quis urna dignissim, vel finibus libero interdum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin mollis scelerisque porttitor. Vestibulum malesuada eu ipsum eget eleifend.', 'author', '2024-04-12', 'Superadmin (1).pdf', '../uploads/e-agenda/Superadmin (1).pdf'),
-(18, 1002, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum erat ut nisl bibendum, a dapibus ex blandit. Nunc pulvinar nisl in urna porta, bibendum rutrum dolor accumsan. Nullam tincidunt nibh tempus, pellentesque felis id, mollis dolor. In feugiat sem quis urna dignissim, vel finibus libero interdum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin mollis scelerisque porttitor. Vestibulum malesuada eu ipsum eget eleifend. 11', 'Author', '2024-04-12', 'Document.pdf', '../uploads/e-agenda/Document.pdf');
 
 -- --------------------------------------------------------
 
@@ -68,16 +57,9 @@ CREATE TABLE `incoming` (
 --
 
 CREATE TABLE `setting_author` (
-  `id` int(11) NOT NULL,
+  `id` bigint(20) NOT NULL,
   `author_name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `setting_author`
---
-
-INSERT INTO `setting_author` (`id`, `author_name`) VALUES
-(2, 'Jek');
 
 -- --------------------------------------------------------
 
@@ -86,7 +68,7 @@ INSERT INTO `setting_author` (`id`, `author_name`) VALUES
 --
 
 CREATE TABLE `setting_category` (
-  `id` int(11) NOT NULL,
+  `id` bigint(20) NOT NULL,
   `category_name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -95,7 +77,8 @@ CREATE TABLE `setting_category` (
 --
 
 INSERT INTO `setting_category` (`id`, `category_name`) VALUES
-(4, 'Vice Mayors');
+(3, 'sample3'),
+(4, 'sample4');
 
 -- --------------------------------------------------------
 
@@ -160,7 +143,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `e-agenda`
 --
 ALTER TABLE `e-agenda`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `incoming`
@@ -172,13 +155,13 @@ ALTER TABLE `incoming`
 -- AUTO_INCREMENT for table `setting_author`
 --
 ALTER TABLE `setting_author`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `setting_category`
 --
 ALTER TABLE `setting_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
