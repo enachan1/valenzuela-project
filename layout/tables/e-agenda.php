@@ -8,9 +8,7 @@
     <div class="p-5">
         <table class="table table-hover table-striped table-bordered display nowrap" style="width: 100%;"  id="list-agenda">
             <thead>
-                <th></th>
                 <th>Title</th>
-                <th>Author</th>
                 <th>Date</th>
                 <th class="last-child">Action</th>
             </thead>
@@ -23,9 +21,7 @@
                 while ($rows = mysqli_fetch_assoc($result)) {
                 ?>
                     <tr>
-                        <td data-num="No" style="text-align: left;" class="num-row"><?= $rows['agenda_no']; ?></td>
                         <td class="long-title"><?= $rows['title']; ?></td>
-                        <td><?= $rows['author']; ?></td>
                         <td><?= $rows['date']; ?></td>
                         <td>
                             <a href="<?= $rows['filepath'] ?>" target="_blank" class="btn btn-primary">
