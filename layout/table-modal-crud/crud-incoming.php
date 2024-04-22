@@ -4,13 +4,13 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
-        <form method="POST" action="upload.php" enctype="multipart/form-data" autocomplete="off">
+        <form method="POST" action="upload-incoming.php" enctype="multipart/form-data" autocomplete="off">
             <div class="form-floating mb-2">
-                <input type="text" class="form-control" id="floatingInput" placeholder="Title">
+                <textarea rows="5" cols="50" class="form-control" name="title" id="floatingInput" placeholder="Title"></textarea>
                 <label for="floatingInput">Title</label>
             </div>
             <div class="form-floating mb-2">
-                <select class="form-select" id="floatingSelect" aria-label="Category">
+                <select class="form-select" name="category" id="floatingSelect" aria-label="Category">
                     <?php
                         $cat_option = "SELECT * FROM `setting_category`";
                         $result_cat = $sqlcon->query($cat_option);
@@ -27,7 +27,7 @@
                 <label for="auth" class="col-form-label">Date</label>
             </div>
             <div class="mb-2">
-                <input type="file" class="form-control" name="pdf" id="auth">
+                <input type="file" class="form-control" name="incoming-pdf" id="auth">
             </div>
     </div>
     <div class="modal-footer">

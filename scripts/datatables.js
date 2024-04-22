@@ -1,22 +1,7 @@
 $(document).ready(function () {
     var agenda_tbl = $("#list-agenda").DataTable({
     keys: true,
-    paging: false,
-    scrollCollapse: true,
-    scrollY: '580px',
-    responsive: {
-        details: {
-            display: $.fn.dataTable.Responsive.display.childRowImmediate,
-            type: 'none',
-            target: -1,
-            renderer: $.fn.dataTable.Responsive.renderer.listHidden()
-        }
-    },
     processing: true,
-    columnDefs: [{
-        searchable: false,
-        targets: 4
-    }, {targets: 1, responsivePriority: 1}],
     layout: {
         bottomStart: 'pageLength',
         bottomEnd: 'paging',

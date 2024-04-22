@@ -1,15 +1,19 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 include __DIR__ . "../../db_connect.php";
-if (isset($_POST)) {
 
+
+if (isset($_POST)) {
     $title = mysqli_real_escape_string($sqlcon, $_POST['title']);
+    $category = mysqli_real_escape_string($sqlcon, $_POST['category']);
     $date = mysqli_real_escape_string($sqlcon, $_POST['date']);
 
     //for file uploading
-    $targetPath = "../uploads/e-agenda/";
-    $fileName = basename($_FILES['pdf']['name']);
+    $targetPath = "../uploads/incoming/";
+    $fileName = basename($_FILES['incoming-pdf']['name']);
     $fileExt = pathinfo($fileName, PATHINFO_EXTENSION);
-    $fileSize = $_FILES['pdf']['size'];
+    $fileSize = $_FILES['incoming-pdf']['size'];
     $conv_filesize = round($fileSize / 1024, 2);
     $limit_fileSize = round(350345678 / 1024, 2);
     $filePath = $targetPath . $fileName;
@@ -17,11 +21,12 @@ if (isset($_POST)) {
 
 
     if (!file_exists($targetPath)) {
-        if (mkdir("../uploads") && mkdir("../uploads/e-agenda")) {
+        echo "not existing";
+        if (mkdir("../uploads/incoming")) {
             if ($conv_filesize < $limit_fileSize) {
                 if (in_array($fileExt, $fileTypes)) {
-                    if (move_uploaded_file($_FILES['pdf']['tmp_name'], $filePath)) {
-                        insertItem($title, $date, $fileName, $filePath);
+                    if (move_uploaded_file($_FILES['incoming-pdf']['tmp_name'], $filePath)) {
+                        insertItem($title, $category, $date, $fileName, $filePath);
                     } else {
                         header("Location: superadmin.php?fail=An error occurred");
                         exit();
@@ -38,8 +43,8 @@ if (isset($_POST)) {
     } else {
         if ($conv_filesize < $limit_fileSize) {
             if (in_array($fileExt, $fileTypes)) {
-                if (move_uploaded_file($_FILES['pdf']['tmp_name'], $filePath)) {
-                    insertItem($title, $date, $fileName, $filePath);
+                if (move_uploaded_file($_FILES['incoming-pdf']['tmp_name'], $filePath)) {
+                    insertItem($title, $category, $date, $fileName, $filePath);
                 } else {
                     header("Location: superadmin.php?fail=An error occurred");
                     exit();
@@ -54,21 +59,21 @@ if (isset($_POST)) {
         }
     }
 } else {
-    echo "err";
+    header("Location: superadmin.php?fail=Error");
 }
 
 
 
-function insertItem($title, $date, $fileName, $filePath)
+function insertItem($title, $category, $date, $fileName, $filePath)
 {
     include __DIR__ . "../../db_connect.php";
 
-    $chk_duplicate = "SELECT * FROM `e-agenda` WHERE `filename` = '$fileName' AND `filePath` = '$filePath'";
+    $chk_duplicate = "SELECT * FROM `incoming` WHERE `filename` = '$fileName' AND `filePath` = '$filePath'";
     $chk_result = $sqlcon->query($chk_duplicate);
 
     if (!mysqli_num_rows($chk_result) > 0) {
-        $insert_query = "INSERT INTO `e-agenda`(`title`, `date`, `filename`, `filepath`)
-        VALUES ('$title', '$date', '$fileName','$filePath')";
+        $insert_query = "INSERT INTO `incoming`(`title`, `category`, `date`, `filename`, `filepath`)
+        VALUES ('$title', '$category', '$date', '$fileName','$filePath')";
         $sqliquery = $sqlcon->query($insert_query);
 
         if ($sqliquery) {
@@ -78,8 +83,7 @@ function insertItem($title, $date, $fileName, $filePath)
             header("Location: superadmin.php?fail=Upload Error");
             exit();
         }
-    }
-    else {
+    } else {
         header("Location: superadmin.php?fail=File Exist");
         exit();
     }
