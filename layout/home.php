@@ -1,4 +1,4 @@
-<div class="card m-3">
+<div class="card m-3 rounded-3 shadow-sm">
     <h5 class="card-header">Recent activities.</h5>
     <div class="card-body">
         <div class="row grid gap-3 d-flex justify-content-center"">
