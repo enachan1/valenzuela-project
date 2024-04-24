@@ -6,7 +6,7 @@
     <div class="modal-body">
         <form method="POST" action="upload-incoming.php" enctype="multipart/form-data" autocomplete="off">
             <div class="form-floating mb-2">
-                <textarea rows="5" cols="50" class="form-control" name="title" id="floatingInput" placeholder="Title"></textarea>
+                <textarea style="height: 200px;" class="form-control" name="title" id="floatingInput" placeholder="Title"></textarea>
                 <label for="floatingInput">Title</label>
             </div>
             <div class="form-floating mb-2">
