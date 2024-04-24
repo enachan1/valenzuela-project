@@ -4,7 +4,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
-        <form method="POST" action="upload.php" enctype="multipart/form-data" autocomplete="off">
+        <form method="POST" action="../backend/upload-agenda.php" enctype="multipart/form-data" autocomplete="off">
             <div class="form-floating mb-2">
                 <input class="form-control" id="message-text" name="title" placeholder="Title"></input>
                 <label for="recipient-name" class="col-form-label">Title</label>

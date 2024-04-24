@@ -32,7 +32,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <a href="../layout/table-modal-crud/delete-category.php?target_id=<?= $rows['id'] ?>&cat=author" class="btn btn-danger">Delete</a>
+                                <a href="../backend/delete-category.php?target_id=<?= $rows['id'] ?>&cat=author" class="btn btn-danger">Delete</a>
                             </div>
                         </div>
                     </div>

@@ -51,7 +51,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <a href="../superadmin/delete.php?target_id=<?= htmlspecialchars($rows['id']) ?>&menu=incoming" class="btn btn-danger">Delete</a>
+                                    <a href="../backend/delete.php?target_id=<?= htmlspecialchars($rows['id']) ?>&menu=incoming" class="btn btn-danger">Delete</a>
                                 </div>
                             </div>
                         </div>

@@ -4,7 +4,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
-        <form method="POST" action="upload-incoming.php" enctype="multipart/form-data" autocomplete="off">
+        <form method="POST" action="../backend/upload-incoming.php" enctype="multipart/form-data" autocomplete="off">
             <div class="form-floating mb-2">
                 <textarea style="height: 200px;" class="form-control" name="title" id="floatingInput" placeholder="Title"></textarea>
                 <label for="floatingInput">Title</label>

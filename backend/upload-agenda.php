@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . "../../db_connect.php";
+include "../db_connect.php";
 if (isset($_POST)) {
 
     $title = mysqli_real_escape_string($sqlcon, $_POST['title']);
@@ -23,15 +23,15 @@ if (isset($_POST)) {
                     if (move_uploaded_file($_FILES['pdf']['tmp_name'], $filePath)) {
                         insertItem($title, $date, $fileName, $filePath);
                     } else {
-                        header("Location: superadmin.php?fail=An error occurred");
+                        header("Location: /valenzuela-project/superadmin/superadmin.php?fail=An error occurred");
                         exit();
                     }
                 } else {
-                    header("Location: superadmin.php?fail=Unsupported File Format");
+                    header("Location: /valenzuela-project/superadmin/superadmin.php?fail=Unsupported File Format");
                     exit();
                 }
             } else {
-                header("Location: superadmin.php?fail=File is too big");
+                header("Location: /valenzuela-project/superadmin/superadmin.php?fail=File is too big");
                 exit();
             }
         }
@@ -41,15 +41,15 @@ if (isset($_POST)) {
                 if (move_uploaded_file($_FILES['pdf']['tmp_name'], $filePath)) {
                     insertItem($title, $date, $fileName, $filePath);
                 } else {
-                    header("Location: superadmin.php?fail=An error occurred");
+                    header("Location: /valenzuela-project/superadmin/superadmin.php?fail=An error occurred");
                     exit();
                 }
             } else {
-                header("Location: superadmin.php?fail=Unsupported File Format");
+                header("Location: /valenzuela-project/superadmin/superadmin.php?fail=Unsupported File Format");
                 exit();
             }
         } else {
-            header("Location: superadmin.php?fail=File is too big");
+            header("Location: /valenzuela-project/superadmin/superadmin.php?fail=File is too big");
             exit();
         }
     }
@@ -61,7 +61,7 @@ if (isset($_POST)) {
 
 function insertItem($title, $date, $fileName, $filePath)
 {
-    include __DIR__ . "../../db_connect.php";
+    include "../db_connect.php";
 
     $chk_duplicate = "SELECT * FROM `e-agenda` WHERE `filename` = '$fileName' AND `filePath` = '$filePath'";
     $chk_result = $sqlcon->query($chk_duplicate);
@@ -72,10 +72,10 @@ function insertItem($title, $date, $fileName, $filePath)
         $sqliquery = $sqlcon->query($insert_query);
 
         if ($sqliquery) {
-            header("Location: superadmin.php?success=Upload Success");
+            header("Location: /valenzuela-project/superadmin/superadmin.php?success=Upload Success");
             exit();
         } else {
-            header("Location: superadmin.php?fail=Upload Error");
+            header("Location: /valenzuela-project/superadmin/superadmin.php?fail=Upload Error");
             exit();
         }
     }

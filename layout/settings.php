@@ -18,7 +18,7 @@
                             <div class="col d-flex align-items-center justify-content-center mx-auto">
                                 <h1>Add Category</h1>
                             </div>
-                            <form action="../layout/table-modal-crud/add-category.php" method="post">
+                            <form action="../backend/add-category.php" method="post">
                                 <div class="col-12 d-flex justify-content-center align-items-center grid gap-3 flex-column border rounded-1 p-3 mx-auto">
                                     <label for="category-name">Category Name</label>
                                     <input type="text" class="form-control w-auto" name="category-name" id="category-name" placeholder="Type here!">
@@ -34,7 +34,7 @@
                             <div class="col d-flex align-items-center justify-content-center mx-auto">
                                 <h1>Add Author</h1>
                             </div>
-                            <form action="../layout/table-modal-crud/add-author.php" method="post">
+                            <form action="../backend/add-author.php" method="post">
                                 <div class="col-12 d-flex justify-content-center align-items-center grid gap-3 flex-column border rounded-1 p-3 mx-auto">
                                     <label for="category-name">Author Name</label>
                                     <input type="text" class="form-control w-auto" name="author-name" id="author-name" placeholder="Type here!">

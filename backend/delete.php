@@ -18,18 +18,18 @@ if (isset($_GET['target_id']) && isset($_GET['menu'])) {
                 $delete_result = $sqlcon->query($delete_query);
 
                 if ($delete_result) {
-                    header("Location: superadmin.php?success=Deleted");
+                    header("Location: /valenzuela-project/superadmin/superadmin.php?success=Deleted");
                     exit();
                 } else {
-                    header("Location: superadmin.php?error=There is an error");
+                    header("Location: /valenzuela-project/superadmin/superadmin.php?error=There is an error");
                     exit();
                 }
             } else {
-                header("Location: superadmin.php?error=There is a problem deleting the file");
+                header("Location: /valenzuela-project/superadmin/superadmin.php?error=There is a problem deleting the file");
                 exit();
             }
         } else {
-            header("Location: superadmin.php?error=There is an error");
+            header("Location: /valenzuela-project/superadmin/superadmin.php?error=There is an error");
             exit();
         }
     }
@@ -46,21 +46,21 @@ if (isset($_GET['target_id']) && isset($_GET['menu'])) {
             $delete_result = $sqlcon->query($delete_query);
 
             if($delete_result) {
-                header("Location: superadmin.php?success=Deleted");
+                header("Location: /valenzuela-project/superadmin/superadmin.php?success=Deleted");
                 exit();
             }
             else {
-                header("Location: superadmin.php?error=There is an error");
+                header("Location: /valenzuela-project/superadmin/superadmin.php?error=There is an error");
                 exit();
             }
         }
         else {
-            header("Location: superadmin.php?error=There is a problem deleting the file");
+            header("Location: /valenzuela-project/superadmin/superadmin.php?error=There is a problem deleting the file");
             exit();
         }
     }
     else {
-        header("Location: superadmin.php?error=There is an error");
+        header("Location: /valenzuela-project/superadmin/superadmin.php?error=There is an error");
         exit();
     }
     }

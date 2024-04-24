@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . "../../../db_connect.php";
+include "../db_connect.php";
 
 if (isset($_GET['target_id']) && isset($_GET['cat'])) {
 
