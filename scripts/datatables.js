@@ -2,6 +2,11 @@ $(document).ready(function () {
     var agenda_tbl = $("#list-agenda").DataTable({
     keys: true,
     processing: true,
+    columnDefs: [{
+        target: 3,
+        visible: false,
+        searchable: false
+    }],
     layout: {
         bottomStart: 'pageLength',
         bottomEnd: 'paging',

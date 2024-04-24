@@ -202,6 +202,15 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                     </div>
                 </div>
                 <!-- End of Modal -->
+
+                <!-- Update Modals -->
+                <div class="modal fade" id="update-agenda" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <?php include('../layout/table-modal-crud/update-agenda.php') ?>
+                    </div>
+                </div>
+            <!-- End of update modals -->
+                <!-- End of Update Modals -->
             </div>
         </main>
 
@@ -211,6 +220,7 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="../scripts/side-nav.js"></script>
         <script src="../scripts/session-nav.js"></script>
+        <script src="../scripts/update-agenda.js"></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
