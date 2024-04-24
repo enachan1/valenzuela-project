@@ -188,31 +188,6 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
                             </main>
                         </div>
 
-
-                        <div class="tab-pane fade" id="list-agenda" role="tabpanel" aria-labelledby="list-agenda-list">
-                            <main class="content px-3 py-2">
-                                <section>
-                                    <div class="container-fluid">
-                                        <h1 class="mt-4">Agenda</h1>
-
-                                        <div class="table-responsive">
-                                            <table class="table table-dark table-sm">
-                                                <thead>
-                                                    <th>No</th>
-                                                    <th>Title</th>
-                                                    <th>Author</th>
-                                                    <th>Date</th>
-                                                    <th class="last-child">Action</th>
-                                                </thead>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </section>
-                            </main>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Modal for Adding Agenda -->
 
                 <div class="modal fade" id="addAgenda" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
