@@ -226,6 +226,7 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
         <script src="https://cdn.datatables.net/plug-ins/2.0.3/features/searchHighlight/dataTables.searchHighlight.min.js"></script>
         <script src="https://bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
         <script src="../scripts/datatables.js"></script>
+        <script src="../scripts/form-scripts.js"></script>
 
     </body>
 
