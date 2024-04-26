@@ -37,8 +37,8 @@
                     <a href="?tb=10" data-bs-target="#attendance" class="list-group-item list-group-item-action bs-light tabShow" aria-expanded="false" role="tab" data-bs-toggle="tab" aria-controls="subitem1">Attendance</a>
                 </div>
             </li>
-            <li class="sidebar-item">
-                <a class="list-group-item list-group-item-action bs-light tabShow" id="settings-tab" href="#list-settings" role="tab" aria-controls="list-settings" data-bs-toggle="tab">
+            <li class="sidebar-item" data-bs-dismiss="offcanvas">
+                <a class="list-group-item list-group-item-action bs-light tabShow" id="settings-tab"  href="#list-settings" role="tab" aria-controls="list-settings" data-bs-toggle="tab">
                     <i class="fas fa-cog pe-2"></i> Setting
                 </a>
             </li>
