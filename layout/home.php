@@ -1,7 +1,7 @@
 <div class="card m-3 rounded-3 shadow-sm">
     <h5 class="card-header">Recent activities.</h5>
     <div class="card-body">
-        <div class="row grid gap-3 d-flex justify-content-center"">
+        <div class="row grid gap-3 d-flex justify-content-center">
             <div class="card card-1" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
