@@ -3,7 +3,7 @@
         <!-- List group -->
         <div class="row flex-column justify-content-center">
             <div class="col">
-                <div class="list-group d-flex flex-row gap-1 text-center fw-medium fs-5" id="myList" role="tablist">
+                <div class="list-group d-flex flex-row text-center fw-medium" id="myList" role="tablist">
                     <a class="list-group-item border border-2 rounded-3 list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Category Maintenance</a>
                     <a class="list-group-item border border-2 rounded-3 list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Authors Maintenance</a>
                     <a class="list-group-item border border-2 rounded-3 list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">User Maintenance</a>
@@ -20,9 +20,13 @@
                             </div>
                             <form action="../backend/add-category.php" method="post">
                                 <div class="col-12 d-flex justify-content-center align-items-center grid gap-3 flex-column border rounded-1 p-3 mx-auto">
-                                    <label for="category-name">Category Name</label>
-                                    <input type="text" class="form-control w-auto" name="category-name" id="category-name" placeholder="Type here!">
-                                    <button class="btn btn-primary" style="max-width: 50ch;">Add</button>
+                                    <div class="form-floating mb-3 fw-semibold">
+                                        <input type="text" name="category-name" class="form-control" id="category-name" placeholder="Category Name">
+                                        <label for="category-name" class="form-label">Category Name:</label>
+                                    </div>
+                                    <div class="d-grid col-1 mx-auto">
+                                        <button class="btn btn-primary" style="max-width: 50ch;">Add</button>
+                                    </div>
                                 </div>
                             </form>
                             <?php include('../layout/tables/category.php') ?>
@@ -36,9 +40,13 @@
                             </div>
                             <form action="../backend/add-author.php" method="post">
                                 <div class="col-12 d-flex justify-content-center align-items-center grid gap-3 flex-column border rounded-1 p-3 mx-auto">
-                                    <label for="category-name">Author Name</label>
-                                    <input type="text" class="form-control w-auto" name="author-name" id="author-name" placeholder="Type here!">
-                                    <button class="btn btn-primary" style="max-width: 50ch;">Add</button>
+                                    <div class="form-floating mb-3 fw-semibold">
+                                        <input type="text" name="author-name" class="form-control" id="author-name" placeholder="Author Name">
+                                        <label for="category-name" class="form-label">Author Name:</label>
+                                    </div>
+                                    <div class="d-grid col-1 mx-auto ">
+                                        <button class="btn btn-primary">Add</button>
+                                    </div>
                                 </div>
                             </form>
                             <?php include('../layout/tables/authors.php') ?>
@@ -57,7 +65,7 @@
                                         <div class="form-floating mb-3">
                                             <!-- Label and Textbox -->
                                             <input type="text" name="a_username" class="form-control" id="userInput" placeholder="Username" required>
-                                            <label for="userInput" class="form-label">Username</label>
+                                            <label for="userInput" class="form-label">Username:</label>
                                         </div>
                                         <div class="form-floating mb-3">
                                             <select class="form-select" id="user-type" name="user_type" aria-lable="User Type">
