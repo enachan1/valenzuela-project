@@ -1,7 +1,7 @@
 <?php
 include "../db_connect.php";
 session_start();
-if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
+if (isset($_SESSION['username']) && ($_SESSION['userlevel'] == 0 || $_SESSION['userlevel'] == 1 || $_SESSION['userlevel'] == 2)) {
     $user = $_SESSION['username'];
 
     if (!isset($user)) {
@@ -244,7 +244,7 @@ if (isset($_SESSION['username']) && $_SESSION['userlevel'] === "superadmin") {
 <?php
 
 } else {
-    header("Location: login.php");
+    header("Location: /valenzuela-project/login.php");
     exit();
 }
 ?>

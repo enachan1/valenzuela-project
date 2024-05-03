@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 18, 2024 at 04:25 AM
+-- Generation Time: Apr 30, 2024 at 12:21 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -45,6 +45,7 @@ CREATE TABLE `incoming` (
   `id` bigint(255) NOT NULL,
   `title` varchar(600) NOT NULL,
   `category` varchar(255) NOT NULL,
+  `date` date NOT NULL,
   `date-uploaded` date NOT NULL DEFAULT current_timestamp(),
   `filename` varchar(255) NOT NULL,
   `filepath` varchar(255) NOT NULL
@@ -60,6 +61,13 @@ CREATE TABLE `setting_author` (
   `id` bigint(20) NOT NULL,
   `author_name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `setting_author`
+--
+
+INSERT INTO `setting_author` (`id`, `author_name`) VALUES
+(10, 'author1');
 
 -- --------------------------------------------------------
 
@@ -77,8 +85,7 @@ CREATE TABLE `setting_category` (
 --
 
 INSERT INTO `setting_category` (`id`, `category_name`) VALUES
-(3, 'sample3'),
-(4, 'sample4');
+(8, 'sample');
 
 -- --------------------------------------------------------
 
@@ -90,7 +97,7 @@ CREATE TABLE `users` (
   `id` bigint(20) NOT NULL,
   `username` varchar(30) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `user_type` varchar(30) NOT NULL
+  `user_type` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -98,8 +105,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `user_type`) VALUES
-(1, 'sadmin1', '$2y$10$iufbI8SQ4Z9xFqC9qDZSI.dtrU9pCznFjrUfax746XTF6OAf3ASiq', 'superadmin'),
-(2, 'superadmin', '$2y$10$Ifko2givu.w9vwVNB/VZ3OBqBhSxGPcm2xsaE4qHreBHPQ3DmzksC', 'superadmin');
+(1, 'sadmin1', '$2y$10$iufbI8SQ4Z9xFqC9qDZSI.dtrU9pCznFjrUfax746XTF6OAf3ASiq', 0),
+(2, 'superadmin', '$2y$10$Ifko2givu.w9vwVNB/VZ3OBqBhSxGPcm2xsaE4qHreBHPQ3DmzksC', 0);
 
 --
 -- Indexes for dumped tables
@@ -143,31 +150,31 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `e-agenda`
 --
 ALTER TABLE `e-agenda`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `incoming`
 --
 ALTER TABLE `incoming`
-  MODIFY `id` bigint(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `setting_author`
 --
 ALTER TABLE `setting_author`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `setting_category`
 --
 ALTER TABLE `setting_category`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

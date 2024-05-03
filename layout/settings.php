@@ -52,27 +52,25 @@
                             </div>
                             <div class="col-12 d-flex grid gap-3 flex-column border rounded-1 p-3 mx-auto">
                                 <div class="row mb-3 fw-semibold">
+                                    <form action="../backend/add-user.php" method="post">
                                     <div class="col-6">
                                         <div class="form-floating mb-3">
                                             <!-- Label and Textbox -->
-                                            <input type="text" name="a_username" class="form-control" id="userInput" placeholder="Username">
+                                            <input type="text" name="a_username" class="form-control" id="userInput" placeholder="Username" required>
                                             <label for="userInput" class="form-label">Username</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input type="text" name="a_email" class="form-control" id="emailInput" placeholder="Email">
-                                            <label for="emailInput" class="form-label">Email</label>
-                                        </div>
-                                        <div class="form-floating mb-3">
                                             <select class="form-select" id="user-type" name="user_type" aria-lable="User Type">
+                                                <option value="0">Superadmin</option>
                                                 <option value="1">Admin</option>
-                                                <option value="0">Cashier</option>
+                                                <option value="2">Records</option>
                                             </select>
                                             <label for="user_type">User Type</label>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-floating mb-2">
-                                            <input type="password" class="form-control" id="passInput" placeholder="Password">
+                                            <input type="password" class="form-control" name="password" id="passInput" placeholder="Password" required>
                                             <label for="passInput" class="form-label">Password</label>
                                         </div>
                                         <div class="form-check mb-2">
@@ -82,7 +80,7 @@
                                             </label>
                                         </div>
                                         <div class="form-floating mb-2">
-                                            <input type="password" class="form-control" id="confirmPass" placeholder="Confirm Password">
+                                            <input type="password" class="form-control" name="conf_pass" id="confirmPass" placeholder="Confirm Password" required>
                                             <label for="confirmPass">Confirm Password</label>
                                         </div>
                                         <div class="form-check">
@@ -92,10 +90,12 @@
                                             </label>
                                         </div>
                                     </div>
+                                    
                                 </div>
                                 <div class="modal-footer">
                                     <button class="btn btn-primary" id="">Add Account</button>
                                 </div>
+                                </form>
                             </div>
                             <form></form>
                         </div>

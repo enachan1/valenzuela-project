@@ -62,17 +62,8 @@ $(document).ready(function () {
     },
 });
 
-// agenda_tbl.columns.adjust().draw();
+agenda_tbl.columns.adjust().draw();
 
-// Add event listeners to the date inputs
-$('#min-date, #max-date').change(function() {
-// Get the min and max dates
-var minDate = $('#min-date').val();
-var maxDate = $('#max-date').val();
-
-// Filter the DataTable based on the date range
-agenda_tbl.draw();
-});
 // for highlighting search
 agenda_tbl.on("draw", ()=> {
     var agenda_body_table = $(agenda_tbl.table().body());
@@ -104,6 +95,9 @@ function(settings, data, dataIndex) {
 var incoming = $("#list-incoming").DataTable({
     
     keys: true,
+    paging: false,
+    scrollCollapse: true,
+    scrollY: '580px',
     responsive: {
         details: {
             display: $.fn.dataTable.Responsive.display.childRowImmediate,
@@ -112,6 +106,11 @@ var incoming = $("#list-incoming").DataTable({
             renderer: $.fn.dataTable.Responsive.renderer.listHidden()
         }
     },
+    processing: true,
+    columnDefs: [{
+        searchable: false,
+        targets: 3
+    }, {targets: 1, responsivePriority: 2}],
     processing: true,
     layout: {
         bottomStart: 'pageLength',
@@ -168,30 +167,18 @@ var incoming = $("#list-incoming").DataTable({
         },
     },
 })
-// Add event listeners to the date inputs
-$('#min-date, #max-date').change(function() {
-// Get the min and max dates
-var minDate = $('#min-date').val();
-var maxDate = $('#max-date').val();
+incoming.table.adjust().draw();
 
-// Filter the DataTable based on the date range
-incoming.draw();
-});
+// for highlighting search
+incoming.on("draw", ()=> {
+    var agenda_body_table = $(incoming.table().body());
+    var search_agenda_tbl = incoming.search();
+    agenda_body_table.unhighlight();
 
-// Custom filtering function for date range
-$.fn.dataTable.ext.search.push(
-function(settings, data, dataIndex) {
-    var minDate = $('#min-date').val();
-    var maxDate = $('#max-date').val();
-    var date = data[3]; // Assuming date is in the third column
+    if(search_agenda_tbl) agenda_body_table.highlight(search_agenda_tbl)
 
-    if ((minDate === "" || maxDate === "") ||
-        (date >= minDate && date <= maxDate)) {
-        return true;
-    }
-    return false;
-}
-);
+})
+
 
 // //outgoing table
 // var incoming = $("#list-outgoing").DataTable({
