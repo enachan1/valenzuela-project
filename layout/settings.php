@@ -58,9 +58,9 @@
                             <div class="col d-flex align-items-center justify-content-center mx-auto">
                                 <h1>User Accounts</h1>
                             </div>
+                            <form action="../backend/add-user.php" method="post">
                             <div class="col-12 d-flex grid gap-3 flex-column border rounded-1 p-3 mx-auto">
                                 <div class="row mb-3 fw-semibold">
-                                    <form action="../backend/add-user.php" method="post">
                                     <div class="col-6">
                                         <div class="form-floating mb-3">
                                             <!-- Label and Textbox -->
@@ -81,8 +81,8 @@
                                             <input type="password" class="form-control" name="password" id="passInput" placeholder="Password" required>
                                             <label for="passInput" class="form-label">Password</label>
                                         </div>
-                                        <div class="form-check mb-2">
-                                            <input class="form-check-input" type="checkbox" value="" id="showPass" onclick="showPass()">
+                                        <div class="form-check mb-2 pass">
+                                            <input class="form-check-input" type="checkbox" value="" id="showPass">
                                             <label class="form-check-label" for="showPass">
                                                 Show Password
                                             </label>
@@ -91,9 +91,9 @@
                                             <input type="password" class="form-control" name="conf_pass" id="confirmPass" placeholder="Confirm Password" required>
                                             <label for="confirmPass">Confirm Password</label>
                                         </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="showPass" onclick="showPassConfirm()">
-                                            <label class="form-check-label" for="showPass">
+                                        <div class="form-check conf-pass">
+                                            <input class="form-check-input" type="checkbox" value="" id="showConfPass">
+                                            <label class="form-check-label" for="showConfPass">
                                                 Show Password
                                             </label>
                                         </div>

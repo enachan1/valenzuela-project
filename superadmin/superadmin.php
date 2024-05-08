@@ -3,6 +3,7 @@ include "../db_connect.php";
 session_start();
 if (isset($_SESSION['username']) && ($_SESSION['userlevel'] == 0 || $_SESSION['userlevel'] == 1 || $_SESSION['userlevel'] == 2)) {
     $user = $_SESSION['username'];
+    $user_level = $_SESSION['userlevel'];
 
     if (!isset($user)) {
         header("Location: /valenzuela-project/login.php");

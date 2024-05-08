@@ -1,7 +1,17 @@
 <div class="list-group" id="list-tab" role="tablist">
-    <div class="d-flex flex-column justify-content-between overflow-hidden" style="min-height: 100svh;">
+    <div class="d-flex flex-column justify-content-between overflow-hidden">
         <!-- Sidebar Navigation -->
         <ul class="sidebar-nav">
+            <div class="sidebar-logo d-flex justify-content-between align-items-center mb-3">
+                <h5 class="d-flex justify-content-center align-items-center text-decoration-none mt-2"><?= $user ?></h5>
+                <span>
+                    <a title="log out" href="../logout.php">
+                        <svg style="display: inline-block;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                        </svg>
+                    </a>
+                </span>
+            </div>
             <li class="sidebar-item">
                 <a class="active list-group-item list-group-item-action bs-light session-active tabShow" id="home-tab" href="?tb=1" data-bs-target="#list-home" role="tab" aria-controls="list-home" data-bs-toggle="tab">
                     <i class="fas fa-home pe-2"></i> Home
@@ -43,16 +53,5 @@
                 </a>
             </li>
         </ul>
-
-        <div class="sidebar-logo d-flex justify-content-between">
-            <a class="d-flex justify-content-center align-items-center"><?= $user ?></a>
-            <span>
-                <a class="btn" href="../logout.php">
-                    <svg style="display: inline-block;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
-                    </svg>
-                </a>
-            </span>
-        </div>
     </div>
 </div>

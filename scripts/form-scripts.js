@@ -1,4 +1,8 @@
-function showPass(){
+const showPassword = document.querySelector("#showPass");
+const show_confPassword = document.querySelector("#showConfPass");
+
+showPassword.addEventListener("click", () => {
+    console.log("clicked show pass")
     var show = document.getElementById('passInput');
     if (show.type== 'password'){
         show.type='text';
@@ -6,8 +10,10 @@ function showPass(){
     else{
         show.type='password';
     }
-}
-function showPassConfirm(){
+})
+
+show_confPassword.addEventListener("click", () => {
+    console.log("clicked show pass in conf")
     var showConfirm = document.getElementById('confirmPass');
     if (showConfirm.type== 'password'){
         showConfirm.type='text';
@@ -15,4 +21,4 @@ function showPassConfirm(){
     else{
         showConfirm.type='password';
     }
-}
+})
