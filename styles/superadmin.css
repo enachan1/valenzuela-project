@@ -23,7 +23,10 @@ body {
     background-size: cover;
     overflow-x: hidden;
 }
-
+table td{
+    width:100px;
+    word-wrap: break-word;
+}
 /* Layout Top */
 
 .custom-img {
