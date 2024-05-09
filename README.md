@@ -38,7 +38,7 @@ C:\xampp\phpMyAdmin
 
 3.) Press <kbd>Ctrl</kbd> + <kbd>f</kbd> and type **auth_type**
 
-4.) The default is config, change it to cookie.
+4.) The default is config, change it to cookie. <br />
 ![auth_type](https://i.ibb.co/KctnckR/Screenshot-2024-05-10-005140.png)
 
 #### Importing the database in phpMyAdmin.
