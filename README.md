@@ -48,7 +48,7 @@ C:\xampp\phpMyAdmin
 2.) Type **root** on username and leave the password blank
 ![log in](https://i.ibb.co/LZc1NFf/Screenshot-2024-05-10-005944.png)
 
-3.) On the left side, click new
+3.) On the left side, click new <br/>
 ![left](https://i.ibb.co/r6S8y7V/Screenshot-2024-05-10-010330.png)
 
 4.) Fill up the database name called **valenzuela-test** then click create.
