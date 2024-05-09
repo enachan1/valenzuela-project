@@ -81,7 +81,7 @@ if (isset($_SESSION['username']) && ($_SESSION['userlevel'] == 0 || $_SESSION['u
 
                         <div class="tab-pane fade show" id="agenda" role="tabpanel" aria-labelledby="agenda-tab">
                             <main class="content px-3 py-2">
-                                <div class="row">
+                                <div class="row w-100">
                                     <div class="container-fluid">
                                         <h1 class="mt-4">E-Agenda</h1>
                                     </div>

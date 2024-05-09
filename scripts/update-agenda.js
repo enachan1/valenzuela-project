@@ -3,6 +3,7 @@ $(document).ready(function () {
         
         
         $('tbody').on('click', '.update-agenda-btn', function() {
+            
             $("#update-agenda").modal("show");
     
             var tablerow = $(this).closest("tr");
@@ -11,8 +12,11 @@ $(document).ready(function () {
             }).get();
     
             console.log(tableData[0]);
+            
+
             $("#update-title").val(tableData[0]);
-            $("#update-date").val(tableData[1])
+            $("#update-date").val(tableData[1]);
+            // $("#id").val(tableData[3]);
         });
     })
 });

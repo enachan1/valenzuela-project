@@ -1,10 +1,10 @@
 $(document).ready(function () {
+
     var agenda_tbl = $("#list-agenda").DataTable({
     keys: true,
     processing: true,
     columnDefs: [{
-        target: 3,
-        visible: false,
+        target: 0,
         searchable: false
     }],
     layout: {
@@ -73,21 +73,6 @@ agenda_tbl.on("draw", ()=> {
     if(search_agenda_tbl) agenda_body_table.highlight(search_agenda_tbl)
 
 })
-
-// Custom filtering function for date range
-$.fn.dataTable.ext.search.push(
-function(settings, data, dataIndex) {
-    var minDate = $('#min-date').val();
-    var maxDate = $('#max-date').val();
-    var date = data[3]; // Assuming date is in the third column
-
-    if ((minDate === "" || maxDate === "") ||
-        (date >= minDate && date <= maxDate)) {
-        return true;
-    }
-    return false;
-}
-);
 
 
 // //incoming datatable

@@ -26,6 +26,42 @@ git clone https://github.com/enachan1/valenzuela-project.git
 
 7.) And its done.
 
+## Setting up Database
+
+#### Make sure that the auth type of phpmyadmin is in cookie mode. To set that up:
+
+1.) Go to:
+```
+C:\xampp\phpMyAdmin
+```
+2.) Open config.inc in a text editor
+
+3.) Press <kbd>Ctrl</kbd> + <kbd>f</kbd> and type **auth_type**
+
+4.) The default is config, change it to cookie.
+![auth_type](https://i.ibb.co/KctnckR/Screenshot-2024-05-10-005140.png)
+
+#### Importing the database in phpMyAdmin.
+    
+1.) Open [phpMyAdmin](http://localhost/phpmyadmin) you expect it to show a log in form.
+
+2.) Type **root** on username and leave the password blank
+![log in](https://i.ibb.co/LZc1NFf/Screenshot-2024-05-10-005944.png)
+
+3.) On the left side, click new
+![left](https://i.ibb.co/r6S8y7V/Screenshot-2024-05-10-010330.png)
+
+4.) Fill up the database name called **valenzuela-test** then click create.
+![create database](https://i.ibb.co/5Lxx44Z/Screenshot-2024-05-10-010707.png)
+
+5.) Once created, click **import** which you can find it at the top.
+
+6.) Browse the **valenzuela-test.sql** file (which you can find it in the project folder) then click **import** at the bottom.
+![browse](https://i.ibb.co/qMNCPv4/Screenshot-2024-05-10-011008.png)
+![file](https://i.ibb.co/QCYHRjK/Screenshot-2024-05-10-011320.png)
+
+7.) And it is ready to use.
+
 
 ## Setting up php.ini config (for larger file uploading)
 

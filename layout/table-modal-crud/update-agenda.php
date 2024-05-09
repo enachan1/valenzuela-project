@@ -5,6 +5,7 @@
     </div>
     <div class="modal-body">
         <form method="POST" action="upload.php" enctype="multipart/form-data" autocomplete="off">
+        <input type="text" id="id">
             <div class="form-floating mb-2">
                 <input class="form-control" id="update-title" name="title" placeholder="Title"></input>
                 <label for="update-title" class="col-form-label">Title</label>
