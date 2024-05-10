@@ -21,7 +21,6 @@ if (isset($_POST)) {
 
 
     if (!file_exists($targetPath)) {
-        echo "not existing";
         if (mkdir("../uploads/incoming")) {
             if ($conv_filesize < $limit_fileSize) {
                 if (in_array($fileExt, $fileTypes)) {

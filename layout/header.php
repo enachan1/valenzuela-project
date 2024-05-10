@@ -5,7 +5,7 @@
 
     <div class="col-md-10 p-3 custom-flex">
         <div class="d-flex mt-3 flex-column text-center">
-            <h1 class="text-center row__h1">Valenzuela 9th City Council</h1>
+            <h1 class="text-center row__h1">Sangguniang Panglungsod</h1>
         </div>
     </div>
 </div>  

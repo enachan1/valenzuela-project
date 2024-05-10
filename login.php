@@ -21,7 +21,7 @@
     <main class="container-login">
         <div class="container-login-img">
             <img src="./assets/Valenzuela_Seal.png" alt="logo">
-            <h1 class="login__h1 left__h1">Sanguniang Panglungsod</h1>
+            <h1 class="login__h1 left__h1">Sangguniang Panglungsod</h1>
         </div>
 
 
